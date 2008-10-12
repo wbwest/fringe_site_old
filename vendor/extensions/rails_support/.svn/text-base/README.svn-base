@@ -1,0 +1,39 @@
+= Rails Support Extension =
+
+Extending Radiant via the standard Rails action pack is a bit painful 
+right now cause it's not easy to re-use the Radiant Layouts.
+
+This Radiant Extension allows you to create Radiant Extensions that can 
+use the normal Rail action pack to create rich database driven application 
+but which are still tightly integrated via the Radiant layout system.
+
+== Usage ==
+Once this extension is installed, update your controllers so that 
+they extended SiteController.  This extension adds a radiant_render
+method to the SiteController which is identical to the standard
+Rails render method except that it uses Radiant to layout the 
+view.
+
+For example, app/controllers/sample_controller.rb:
+{{{
+class SampleController < SiteController
+  def index    
+    radiant_render :layout=>"path/to/page"
+  end    
+end
+}}}
+
+The above will look up the Radiant page that maps to URL 
+"path/to/page" and use that as the template for rendering the 
+content of the rendered rhtml view.  Instead of using the page's body
+part, the result of rendering the rhtml view will be used as the body.
+
+If layout is not specified, it uses the layout of the root page.
+
+This extension also adds a helper to include snippets from Radiant
+
+For example, app/views/sample_controller/index.rhtml:
+{{{
+<h1>How to include a snippet:</h1>
+<%= snippet("welcome")%>
+}}}
