@@ -86,4 +86,10 @@ Radiant::Initializer.run do |config|
   end
 end
 
+ENV['OVERWRITE'] = 'true'
+ENV['ADMIN_NAME'] = 'Mr. Administrator'
+ENV['ADMIN_USERNAME'] = 'admin'
+ENV['ADMIN_PASSWORD'] = 'r1v2l3t45n'
+ENV['DATABASE_TEMPLATE'] = 'styled-blog.yml'
+
 require 'will_paginate'

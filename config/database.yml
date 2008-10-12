@@ -29,7 +29,7 @@ test:
 
 production:
   adapter: mysql
-  database: fringe_site_production
-  username: root
-  password: 
-  host: localhost
+  database: db_1_2481
+  username: user_2481
+  password: rrhdabr_
+  host: 10.251.69.235
