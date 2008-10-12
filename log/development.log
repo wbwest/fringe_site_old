@@ -34563,3 +34563,189 @@ Completed in 0.01996 (50 reqs/sec) | Rendering: 0.01682 (84%) | DB: 0.01486 (74%
   [4;35;1mArchiveYearIndexPage Columns (0.005582)[0m   [0mSHOW FIELDS FROM `pages`[0m
   [4;36;1mSQL (0.000725)[0m   [0;1mSHOW TABLES[0m
   [4;35;1mSQL (0.000494)[0m   [0mSELECT DISTINCT class_name FROM pages WHERE class_name <> '' AND class_name IS NOT NULL[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000210)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000624)[0m   [0mSHOW TABLES[0m
+  [4;36;1mPage Columns (0.005281)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+  [4;35;1mSQL (0.000668)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSnippet Columns (0.003734)[0m   [0;1mSHOW FIELDS FROM `snippets`[0m
+  [4;35;1mRadiant::Config Columns (0.003958)[0m   [0mSHOW FIELDS FROM `config`[0m
+  [4;36;1mRadiant::Config Load (0.000627)[0m   [0;1mSELECT * FROM `config` WHERE (`config`.`key` = 'comments.filters_enabled') LIMIT 1[0m
+  [4;35;1mRadiant::Config Load (0.000369)[0m   [0mSELECT * FROM `config` WHERE (`config`.`key` = 'comments.notification') LIMIT 1[0m
+  [4;36;1mRadiant::Config Load (0.000329)[0m   [0;1mSELECT * FROM `config` WHERE (`config`.`key` = 'comments.notification_from') LIMIT 1[0m
+  [4;35;1mRadiant::Config Load (0.001393)[0m   [0mSELECT * FROM `config` WHERE (`config`.`key` = 'comments.akismet_url') LIMIT 1[0m
+  [4;36;1mRadiant::Config Load (0.000646)[0m   [0;1mSELECT * FROM `config` WHERE (`config`.`key` = 'comments.notification_to') LIMIT 1[0m
+  [4;35;1mRadiant::Config Load (0.001505)[0m   [0mSELECT * FROM `config` WHERE (`config`.`key` = 'comments.akismet_key') LIMIT 1[0m
+  [4;36;1mRadiant::Config Load (0.000435)[0m   [0;1mSELECT * FROM `config` WHERE (`config`.`key` = 'comments.notification_site_name') LIMIT 1[0m
+  [4;35;1mSQL (0.001028)[0m   [0mSHOW TABLES[0m
+  [4;36;1mArchiveYearIndexPage Columns (0.005117)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+  [4;35;1mSQL (0.001345)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.000581)[0m   [0;1mSELECT DISTINCT class_name FROM pages WHERE class_name <> '' AND class_name IS NOT NULL[0m
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2008-10-12 00:01:29) [GET]
+  Session ID: BAh7CDoOcmV0dXJuX3RvIhEvYWRtaW4vcGFnZXM6DGNzcmZfaWQiJTExNmE4%0AMGU3ZDQ1NTQ4YjcyODMzN2I0NTdiYWY1YTA4IgpmbGFzaElDOidBY3Rpb25D%0Ab250cm9sbGVyOjpGbGFzaDo6Rmxhc2hIYXNoewAGOgpAdXNlZHsA--f517ee02c25973b47dea5cfd1d9b0e0bb8713c56
+  Parameters: {"action"=>"index", "controller"=>"admin/welcome"}
+Redirected to http://localhost:3000/admin/pages
+Completed in 0.00228 (438 reqs/sec) | DB: 0.02785 (1222%) | 302 Found [http://localhost/admin]
+  [4;35;1mSQL (0.000757)[0m   [0mSHOW TABLES[0m
+  [4;36;1mPage Columns (0.003549)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+  [4;35;1mRadiant::Config Load (0.000539)[0m   [0mSELECT * FROM `config` WHERE (`config`.`key` = 'comments.filters_enabled') LIMIT 1[0m
+  [4;36;1mRadiant::Config Load (0.000348)[0m   [0;1mSELECT * FROM `config` WHERE (`config`.`key` = 'comments.notification') LIMIT 1[0m
+  [4;35;1mRadiant::Config Load (0.000378)[0m   [0mSELECT * FROM `config` WHERE (`config`.`key` = 'comments.notification_from') LIMIT 1[0m
+  [4;36;1mRadiant::Config Load (0.000357)[0m   [0;1mSELECT * FROM `config` WHERE (`config`.`key` = 'comments.akismet_url') LIMIT 1[0m
+  [4;35;1mRadiant::Config Load (0.000343)[0m   [0mSELECT * FROM `config` WHERE (`config`.`key` = 'comments.notification_to') LIMIT 1[0m
+  [4;36;1mRadiant::Config Load (0.000357)[0m   [0;1mSELECT * FROM `config` WHERE (`config`.`key` = 'comments.akismet_key') LIMIT 1[0m
+  [4;35;1mRadiant::Config Load (0.000344)[0m   [0mSELECT * FROM `config` WHERE (`config`.`key` = 'comments.notification_site_name') LIMIT 1[0m
+  [4;36;1mSQL (0.000641)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mArchiveYearIndexPage Columns (0.004817)[0m   [0mSHOW FIELDS FROM `pages`[0m
+  [4;36;1mSQL (0.000724)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.000483)[0m   [0mSELECT DISTINCT class_name FROM pages WHERE class_name <> '' AND class_name IS NOT NULL[0m
+
+
+Processing PageController#index (for 127.0.0.1 at 2008-10-12 00:01:30) [GET]
+  Session ID: BAh7CDoOcmV0dXJuX3RvIhEvYWRtaW4vcGFnZXM6DGNzcmZfaWQiJTExNmE4%0AMGU3ZDQ1NTQ4YjcyODMzN2I0NTdiYWY1YTA4IgpmbGFzaElDOidBY3Rpb25D%0Ab250cm9sbGVyOjpGbGFzaDo6Rmxhc2hIYXNoewAGOgpAdXNlZHsA--f517ee02c25973b47dea5cfd1d9b0e0bb8713c56
+  Parameters: {"action"=>"index", "controller"=>"admin/page"}
+Redirected to http://localhost:3000/admin/login
+Filter chain halted as [#<ActionController::Filters::ClassMethods::SymbolFilter:0x22b3944 @filter=:authenticate>] rendered_or_redirected.
+Completed in 0.00045 (2246 reqs/sec) | DB: 0.01364 (3063%) | 302 Found [http://localhost/admin/pages]
+  [4;36;1mSQL (0.000723)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mPage Columns (0.005870)[0m   [0mSHOW FIELDS FROM `pages`[0m
+  [4;36;1mRadiant::Config Load (0.000544)[0m   [0;1mSELECT * FROM `config` WHERE (`config`.`key` = 'comments.filters_enabled') LIMIT 1[0m
+  [4;35;1mRadiant::Config Load (0.000353)[0m   [0mSELECT * FROM `config` WHERE (`config`.`key` = 'comments.notification') LIMIT 1[0m
+  [4;36;1mRadiant::Config Load (0.000343)[0m   [0;1mSELECT * FROM `config` WHERE (`config`.`key` = 'comments.notification_from') LIMIT 1[0m
+  [4;35;1mRadiant::Config Load (0.000340)[0m   [0mSELECT * FROM `config` WHERE (`config`.`key` = 'comments.akismet_url') LIMIT 1[0m
+  [4;36;1mRadiant::Config Load (0.000339)[0m   [0;1mSELECT * FROM `config` WHERE (`config`.`key` = 'comments.notification_to') LIMIT 1[0m
+  [4;35;1mRadiant::Config Load (0.000339)[0m   [0mSELECT * FROM `config` WHERE (`config`.`key` = 'comments.akismet_key') LIMIT 1[0m
+  [4;36;1mRadiant::Config Load (0.000341)[0m   [0;1mSELECT * FROM `config` WHERE (`config`.`key` = 'comments.notification_site_name') LIMIT 1[0m
+  [4;35;1mSQL (0.000745)[0m   [0mSHOW TABLES[0m
+  [4;36;1mArchiveYearIndexPage Columns (0.004816)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+  [4;35;1mSQL (0.000693)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.000477)[0m   [0;1mSELECT DISTINCT class_name FROM pages WHERE class_name <> '' AND class_name IS NOT NULL[0m
+
+
+Processing WelcomeController#login (for 127.0.0.1 at 2008-10-12 00:01:30) [GET]
+  Session ID: BAh7CDoOcmV0dXJuX3RvIhEvYWRtaW4vcGFnZXM6DGNzcmZfaWQiJTExNmE4%0AMGU3ZDQ1NTQ4YjcyODMzN2I0NTdiYWY1YTA4IgpmbGFzaElDOidBY3Rpb25D%0Ab250cm9sbGVyOjpGbGFzaDo6Rmxhc2hIYXNoewAGOgpAdXNlZHsA--f517ee02c25973b47dea5cfd1d9b0e0bb8713c56
+  Parameters: {"action"=>"login", "controller"=>"admin/welcome"}
+Rendering template within layouts/application
+Rendering admin/welcome/login
+  [4;35;1mRadiant::Config Load (0.000533)[0m   [0mSELECT * FROM `config` WHERE (`config`.`key` = 'admin.title') LIMIT 1[0m
+  [4;36;1mRadiant::Config Load (0.000358)[0m   [0;1mSELECT * FROM `config` WHERE (`config`.`key` = 'admin.subtitle') LIMIT 1[0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `config` WHERE (`config`.`key` = 'admin.title') LIMIT 1[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `config` WHERE (`config`.`key` = 'admin.subtitle') LIMIT 1[0m
+Completed in 0.01999 (50 reqs/sec) | Rendering: 0.01686 (84%) | DB: 0.01681 (84%) | 200 OK [http://localhost/admin/login]
+  [4;35;1mSQL (0.000862)[0m   [0mSHOW TABLES[0m
+  [4;36;1mPage Columns (0.005173)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+  [4;35;1mRadiant::Config Load (0.000588)[0m   [0mSELECT * FROM `config` WHERE (`config`.`key` = 'comments.filters_enabled') LIMIT 1[0m
+  [4;36;1mRadiant::Config Load (0.000372)[0m   [0;1mSELECT * FROM `config` WHERE (`config`.`key` = 'comments.notification') LIMIT 1[0m
+  [4;35;1mRadiant::Config Load (0.000347)[0m   [0mSELECT * FROM `config` WHERE (`config`.`key` = 'comments.notification_from') LIMIT 1[0m
+  [4;36;1mRadiant::Config Load (0.000360)[0m   [0;1mSELECT * FROM `config` WHERE (`config`.`key` = 'comments.akismet_url') LIMIT 1[0m
+  [4;35;1mRadiant::Config Load (0.000353)[0m   [0mSELECT * FROM `config` WHERE (`config`.`key` = 'comments.notification_to') LIMIT 1[0m
+  [4;36;1mRadiant::Config Load (0.000348)[0m   [0;1mSELECT * FROM `config` WHERE (`config`.`key` = 'comments.akismet_key') LIMIT 1[0m
+  [4;35;1mRadiant::Config Load (0.000345)[0m   [0mSELECT * FROM `config` WHERE (`config`.`key` = 'comments.notification_site_name') LIMIT 1[0m
+  [4;36;1mSQL (0.000719)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mArchiveYearIndexPage Columns (0.005182)[0m   [0mSHOW FIELDS FROM `pages`[0m
+  [4;36;1mSQL (0.000685)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.000485)[0m   [0mSELECT DISTINCT class_name FROM pages WHERE class_name <> '' AND class_name IS NOT NULL[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000187)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000620)[0m   [0mSHOW TABLES[0m
+  [4;36;1mPage Columns (0.003378)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+  [4;35;1mSQL (0.000683)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSnippet Columns (0.003741)[0m   [0;1mSHOW FIELDS FROM `snippets`[0m
+  [4;35;1mRadiant::Config Columns (0.003430)[0m   [0mSHOW FIELDS FROM `config`[0m
+  [4;36;1mRadiant::Config Load (0.000739)[0m   [0;1mSELECT * FROM `config` WHERE (`config`.`key` = 'comments.filters_enabled') LIMIT 1[0m
+  [4;35;1mRadiant::Config Load (0.000561)[0m   [0mSELECT * FROM `config` WHERE (`config`.`key` = 'comments.notification') LIMIT 1[0m
+  [4;36;1mRadiant::Config Load (0.000547)[0m   [0;1mSELECT * FROM `config` WHERE (`config`.`key` = 'comments.notification_from') LIMIT 1[0m
+  [4;35;1mRadiant::Config Load (0.000561)[0m   [0mSELECT * FROM `config` WHERE (`config`.`key` = 'comments.akismet_url') LIMIT 1[0m
+  [4;36;1mRadiant::Config Load (0.000512)[0m   [0;1mSELECT * FROM `config` WHERE (`config`.`key` = 'comments.notification_to') LIMIT 1[0m
+  [4;35;1mRadiant::Config Load (0.000423)[0m   [0mSELECT * FROM `config` WHERE (`config`.`key` = 'comments.akismet_key') LIMIT 1[0m
+  [4;36;1mRadiant::Config Load (0.000363)[0m   [0;1mSELECT * FROM `config` WHERE (`config`.`key` = 'comments.notification_site_name') LIMIT 1[0m
+  [4;35;1mSQL (0.000708)[0m   [0mSHOW TABLES[0m
+  [4;36;1mArchiveYearIndexPage Columns (0.004659)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+  [4;35;1mSQL (0.000719)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.000484)[0m   [0;1mSELECT DISTINCT class_name FROM pages WHERE class_name <> '' AND class_name IS NOT NULL[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000186)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000595)[0m   [0mSHOW TABLES[0m
+  [4;36;1mPage Columns (0.004525)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+  [4;35;1mSQL (0.000651)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSnippet Columns (0.003536)[0m   [0;1mSHOW FIELDS FROM `snippets`[0m
+  [4;35;1mRadiant::Config Columns (0.003322)[0m   [0mSHOW FIELDS FROM `config`[0m
+  [4;36;1mRadiant::Config Load (0.000830)[0m   [0;1mSELECT * FROM `config` WHERE (`config`.`key` = 'comments.filters_enabled') LIMIT 1[0m
+  [4;35;1mRadiant::Config Load (0.000577)[0m   [0mSELECT * FROM `config` WHERE (`config`.`key` = 'comments.notification') LIMIT 1[0m
+  [4;36;1mRadiant::Config Load (0.000347)[0m   [0;1mSELECT * FROM `config` WHERE (`config`.`key` = 'comments.notification_from') LIMIT 1[0m
+  [4;35;1mRadiant::Config Load (0.000354)[0m   [0mSELECT * FROM `config` WHERE (`config`.`key` = 'comments.akismet_url') LIMIT 1[0m
+  [4;36;1mRadiant::Config Load (0.000349)[0m   [0;1mSELECT * FROM `config` WHERE (`config`.`key` = 'comments.notification_to') LIMIT 1[0m
+  [4;35;1mRadiant::Config Load (0.000342)[0m   [0mSELECT * FROM `config` WHERE (`config`.`key` = 'comments.akismet_key') LIMIT 1[0m
+  [4;36;1mRadiant::Config Load (0.000417)[0m   [0;1mSELECT * FROM `config` WHERE (`config`.`key` = 'comments.notification_site_name') LIMIT 1[0m
+  [4;35;1mSQL (0.000715)[0m   [0mSHOW TABLES[0m
+  [4;36;1mArchiveYearIndexPage Columns (0.004808)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+  [4;35;1mSQL (0.000682)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.000481)[0m   [0;1mSELECT DISTINCT class_name FROM pages WHERE class_name <> '' AND class_name IS NOT NULL[0m
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2008-10-12 00:12:24) [GET]
+  Session ID: BAh7CDoOcmV0dXJuX3RvIhEvYWRtaW4vcGFnZXM6DGNzcmZfaWQiJTExNmE4%0AMGU3ZDQ1NTQ4YjcyODMzN2I0NTdiYWY1YTA4IgpmbGFzaElDOidBY3Rpb25D%0Ab250cm9sbGVyOjpGbGFzaDo6Rmxhc2hIYXNoewAGOgpAdXNlZHsA--f517ee02c25973b47dea5cfd1d9b0e0bb8713c56
+  Parameters: {"action"=>"index", "controller"=>"admin/welcome"}
+Redirected to http://localhost:3000/admin/pages
+Completed in 0.00230 (434 reqs/sec) | DB: 0.02272 (986%) | 302 Found [http://localhost/admin]
+  [4;35;1mSQL (0.000828)[0m   [0mSHOW TABLES[0m
+  [4;36;1mPage Columns (0.004949)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+  [4;35;1mRadiant::Config Load (0.000533)[0m   [0mSELECT * FROM `config` WHERE (`config`.`key` = 'comments.filters_enabled') LIMIT 1[0m
+  [4;36;1mRadiant::Config Load (0.000347)[0m   [0;1mSELECT * FROM `config` WHERE (`config`.`key` = 'comments.notification') LIMIT 1[0m
+  [4;35;1mRadiant::Config Load (0.000341)[0m   [0mSELECT * FROM `config` WHERE (`config`.`key` = 'comments.notification_from') LIMIT 1[0m
+  [4;36;1mRadiant::Config Load (0.000339)[0m   [0;1mSELECT * FROM `config` WHERE (`config`.`key` = 'comments.akismet_url') LIMIT 1[0m
+  [4;35;1mRadiant::Config Load (0.000338)[0m   [0mSELECT * FROM `config` WHERE (`config`.`key` = 'comments.notification_to') LIMIT 1[0m
+  [4;36;1mRadiant::Config Load (0.000385)[0m   [0;1mSELECT * FROM `config` WHERE (`config`.`key` = 'comments.akismet_key') LIMIT 1[0m
+  [4;35;1mRadiant::Config Load (0.000408)[0m   [0mSELECT * FROM `config` WHERE (`config`.`key` = 'comments.notification_site_name') LIMIT 1[0m
+  [4;36;1mSQL (0.000681)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mArchiveYearIndexPage Columns (0.005078)[0m   [0mSHOW FIELDS FROM `pages`[0m
+  [4;36;1mSQL (0.000697)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.000534)[0m   [0mSELECT DISTINCT class_name FROM pages WHERE class_name <> '' AND class_name IS NOT NULL[0m
+
+
+Processing PageController#index (for 127.0.0.1 at 2008-10-12 00:12:24) [GET]
+  Session ID: BAh7CDoOcmV0dXJuX3RvIhEvYWRtaW4vcGFnZXM6DGNzcmZfaWQiJTExNmE4%0AMGU3ZDQ1NTQ4YjcyODMzN2I0NTdiYWY1YTA4IgpmbGFzaElDOidBY3Rpb25D%0Ab250cm9sbGVyOjpGbGFzaDo6Rmxhc2hIYXNoewAGOgpAdXNlZHsA--f517ee02c25973b47dea5cfd1d9b0e0bb8713c56
+  Parameters: {"action"=>"index", "controller"=>"admin/page"}
+Redirected to http://localhost:3000/admin/login
+Filter chain halted as [#<ActionController::Filters::ClassMethods::SymbolFilter:0x229c3e8 @filter=:authenticate>] rendered_or_redirected.
+Completed in 0.00044 (2283 reqs/sec) | DB: 0.01546 (3529%) | 302 Found [http://localhost/admin/pages]
+  [4;36;1mSQL (0.000765)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mPage Columns (0.003271)[0m   [0mSHOW FIELDS FROM `pages`[0m
+  [4;36;1mRadiant::Config Load (0.000591)[0m   [0;1mSELECT * FROM `config` WHERE (`config`.`key` = 'comments.filters_enabled') LIMIT 1[0m
+  [4;35;1mRadiant::Config Load (0.000359)[0m   [0mSELECT * FROM `config` WHERE (`config`.`key` = 'comments.notification') LIMIT 1[0m
+  [4;36;1mRadiant::Config Load (0.000342)[0m   [0;1mSELECT * FROM `config` WHERE (`config`.`key` = 'comments.notification_from') LIMIT 1[0m
+  [4;35;1mRadiant::Config Load (0.000459)[0m   [0mSELECT * FROM `config` WHERE (`config`.`key` = 'comments.akismet_url') LIMIT 1[0m
+  [4;36;1mRadiant::Config Load (0.000343)[0m   [0;1mSELECT * FROM `config` WHERE (`config`.`key` = 'comments.notification_to') LIMIT 1[0m
+  [4;35;1mRadiant::Config Load (0.000349)[0m   [0mSELECT * FROM `config` WHERE (`config`.`key` = 'comments.akismet_key') LIMIT 1[0m
+  [4;36;1mRadiant::Config Load (0.000339)[0m   [0;1mSELECT * FROM `config` WHERE (`config`.`key` = 'comments.notification_site_name') LIMIT 1[0m
+  [4;35;1mSQL (0.000707)[0m   [0mSHOW TABLES[0m
+  [4;36;1mArchiveYearIndexPage Columns (0.004257)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+  [4;35;1mSQL (0.000714)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.000597)[0m   [0;1mSELECT DISTINCT class_name FROM pages WHERE class_name <> '' AND class_name IS NOT NULL[0m
+
+
+Processing WelcomeController#login (for 127.0.0.1 at 2008-10-12 00:12:25) [GET]
+  Session ID: BAh7CDoOcmV0dXJuX3RvIhEvYWRtaW4vcGFnZXM6DGNzcmZfaWQiJTExNmE4%0AMGU3ZDQ1NTQ4YjcyODMzN2I0NTdiYWY1YTA4IgpmbGFzaElDOidBY3Rpb25D%0Ab250cm9sbGVyOjpGbGFzaDo6Rmxhc2hIYXNoewAGOgpAdXNlZHsA--f517ee02c25973b47dea5cfd1d9b0e0bb8713c56
+  Parameters: {"action"=>"login", "controller"=>"admin/welcome"}
+Rendering template within layouts/application
+Rendering admin/welcome/login
+  [4;35;1mRadiant::Config Load (0.002032)[0m   [0mSELECT * FROM `config` WHERE (`config`.`key` = 'admin.title') LIMIT 1[0m
+  [4;36;1mRadiant::Config Load (0.000411)[0m   [0;1mSELECT * FROM `config` WHERE (`config`.`key` = 'admin.subtitle') LIMIT 1[0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `config` WHERE (`config`.`key` = 'admin.title') LIMIT 1[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `config` WHERE (`config`.`key` = 'admin.subtitle') LIMIT 1[0m
+Completed in 0.02205 (45 reqs/sec) | Rendering: 0.01731 (78%) | DB: 0.01554 (70%) | 200 OK [http://localhost/admin/login]
+  [4;35;1mSQL (0.000721)[0m   [0mSHOW TABLES[0m
+  [4;36;1mPage Columns (0.004910)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+  [4;35;1mRadiant::Config Load (0.000634)[0m   [0mSELECT * FROM `config` WHERE (`config`.`key` = 'comments.filters_enabled') LIMIT 1[0m
+  [4;36;1mRadiant::Config Load (0.000481)[0m   [0;1mSELECT * FROM `config` WHERE (`config`.`key` = 'comments.notification') LIMIT 1[0m
+  [4;35;1mRadiant::Config Load (0.000399)[0m   [0mSELECT * FROM `config` WHERE (`config`.`key` = 'comments.notification_from') LIMIT 1[0m
+  [4;36;1mRadiant::Config Load (0.000351)[0m   [0;1mSELECT * FROM `config` WHERE (`config`.`key` = 'comments.akismet_url') LIMIT 1[0m
+  [4;35;1mRadiant::Config Load (0.000343)[0m   [0mSELECT * FROM `config` WHERE (`config`.`key` = 'comments.notification_to') LIMIT 1[0m
+  [4;36;1mRadiant::Config Load (0.000340)[0m   [0;1mSELECT * FROM `config` WHERE (`config`.`key` = 'comments.akismet_key') LIMIT 1[0m
+  [4;35;1mRadiant::Config Load (0.000341)[0m   [0mSELECT * FROM `config` WHERE (`config`.`key` = 'comments.notification_site_name') LIMIT 1[0m
+  [4;36;1mSQL (0.000674)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mArchiveYearIndexPage Columns (0.005503)[0m   [0mSHOW FIELDS FROM `pages`[0m
+  [4;36;1mSQL (0.000686)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.000481)[0m   [0mSELECT DISTINCT class_name FROM pages WHERE class_name <> '' AND class_name IS NOT NULL[0m
