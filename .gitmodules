@@ -1,0 +1,3 @@
+[submodule "vendor/extensions/submit"]
+	path = vendor/extensions/submit
+	url = git@github.com:revworks/fringehub.git
