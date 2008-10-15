@@ -1,0 +1,10 @@
+<div class="left_column" style="width:700px">
+  <p><%= link_to "<< return to the project", :controller => :project, :action => :view, :id => @project%></p>
+  <% block_me "supporters of " + 
+     link_to (@project.title.downcase, :controller => :project, :action => :view, :id => @project), nil, "100%" do %>
+    <div style="height:430px">
+      <%= render :partial => "/profile/user_list", :locals => {:users => @users, :cols => 4, :show_thumbs=>true} %>  
+    </div>
+    <%= will_paginate @users %>
+  <% end %>
+</div>

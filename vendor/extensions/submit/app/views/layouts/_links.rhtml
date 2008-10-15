@@ -1,0 +1,18 @@
+<div id="nav_links">
+    <% if session[:user_id] %>
+    <ul>
+      <li>
+        <%= link_to "dashboard", :controller => :dashboard%>
+      </li>
+      <li>
+        <%= link_to "my profile", :controller => :profile, :action => :view, :id => session[:user_id] %>      
+      </li>
+      <li>
+        <%= link_to "admin site", {:controller => :admin}, :class => "header" if User.find_by_id(session[:user_id]).is_admin %>
+      </li>
+    <% end %>
+      <li>
+        <%= link_to "search", :controller => :dashboard, :action => :search  %>
+      </li>
+    </ul>
+</div>

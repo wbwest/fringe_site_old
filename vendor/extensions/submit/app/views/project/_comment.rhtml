@@ -1,0 +1,31 @@
+<a name="comment_<%= comment.id %>" />
+<div class="projectCommentContainer">
+  
+  <div class="projectCommentLeftColumn">
+    <div class="projectCommentImage">
+      <%= render :partial => "profile/user_image", 
+          :locals =>  {:user_id => comment.user.id, :show_thumbs => true} %>
+    </div>
+  </div>
+  
+  <div class="projectCommentRightColumn">
+    <div class="projectCommentHeader">
+      <%= comment.user.full_name %> wrote<br />
+      <% if comment.date_posted %>
+        at <%= format_comment_datetime(comment.date_posted) %>
+      <% end %>
+    </div>
+    <div class="projectComment"><%= h(comment.comment).gsub(/\n/, "<br />") %></div>
+    <% if comment.user_id==session[:user_id] %>
+      <div class="projectCommentFooter">
+        <%= link_to_remote "remove comment",
+                 :url => {:action     => "delete_comment", 
+                          :id         => comment.id, 
+                          :project_id => project.id},
+                 :confirm => "Are you sure you want to delete this comment?",
+                 :update  => "projectCommentsListContainer"%>
+      </div>
+    <% end %>
+  </div>
+</div>
+<br/><br/>

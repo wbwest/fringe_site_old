@@ -1,0 +1,11 @@
+<% if @profile_user.projects.count > 0 %>
+  <% block_me @profile_user.first_name.downcase + "'s projects" do %>
+      <ul>
+      <% for project in @active_projects %>
+        <li>
+          <%= link_to project.title, :controller => :project, :action => :view, :id => project.id %>
+        </li>
+      <% end %>
+    </ul>
+  <% end %>
+<% end %>

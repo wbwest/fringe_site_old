@@ -1,0 +1,11 @@
+<% title @profile_user.full_name %>
+
+<div class="left_column">
+  <%= render :partial => "profile_details" %>
+</div>
+
+<div class="right_column" style="margin-left:700px;">
+  <%= render :partial => "active_projects" %>
+  <%= render :partial => "draft_projects" %>
+  <%= render :partial => "projects_supported" %>
+</div>

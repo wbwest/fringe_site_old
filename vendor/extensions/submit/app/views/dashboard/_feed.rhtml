@@ -1,0 +1,47 @@
+<%
+  #TODO: breaks some mvc rules. would like to refactor.
+  
+  def view_all
+    @logs = Log.find :all, :order => "created_at DESC", :limit => 15
+  end
+
+  def view_filtered
+    all_logs = Log.find :all, :order => "created_at DESC"
+    @logs = Array.new
+    all_logs.each do |log|
+      @user.voted_projects.each do |project|
+        @logs << log if project.id == log.project_id
+        return if @logs.length == 15
+      end
+    end
+  end
+
+  if @user
+    @user.filter_news ? view_filtered : view_all
+  else
+    view_all
+  end
+%>
+
+<div id = "news_feed">
+  <%= @filter_text if @filter_text %>
+  <% @logs.each do |log| %>
+    <p>
+      <% project = Project.find_by_id log.project_id  %>
+      <%= link_to project.title, {:controller => :project, :action => :view, :id => project}   %>
+      <%= log.description %>
+    </p>
+  <% end %>
+</div>
+
+<script>
+<%=
+  if @user
+    @user.filter_news ? toggle_view = "view all" : toggle_view = "view supported"
+  end
+  
+  update_page do |page|
+    page.replace_html "toggle_view", toggle_view if @user
+  end  
+%>
+</script>

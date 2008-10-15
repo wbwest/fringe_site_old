@@ -1,0 +1,65 @@
+<%
+
+  def pagesPrior(startPage, cap, totalPages)
+    prior     = []
+    startPage = startPage - 1
+    while startPage >= 1 && cap>0 && startPage<=totalPages
+      prior     << startPage
+      startPage =  startPage - 1
+      cap       =  cap - 1
+    end
+    prior
+  end# pagesPrior()
+  def pagesNext(startPage, cap, totalPages)
+    nextP     = []
+    startPage = startPage + 1
+    while startPage<=totalPages && cap>0 
+      nextP     << startPage
+      startPage =  startPage + 1
+      cap       =  cap - 1
+    end
+    nextP
+  end# pagesNext()
+  def link_to_paginate(link_rep, page_num, project_id)
+    link_to_remote  link_rep.to_s,
+                    :update => 'projectCommentsListContainer',
+                    :url    => {:action => 'paginate',
+                                :pageNumber => page_num,
+                                :project_id => project_id}
+  end# link_to_paginate()
+
+  numComments = 0 unless numComments
+
+  if ProjectController::COMMENTS_PER_PAGE < numComments
+    navLinkSep  = '|' 
+    pageNumber  = 1 unless pageNumber
+    totalPages  = numComments / ProjectController::COMMENTS_PER_PAGE
+    if(numComments % ProjectController::COMMENTS_PER_PAGE) > 0
+      totalPages  = totalPages + 1
+    end
+    displayCap  = 6
+    priorP      = pagesPrior(pageNumber, displayCap/2, totalPages)
+    displayCap  = displayCap - priorP.length
+    nextP       = pagesNext(pageNumber, displayCap, totalPages)
+%>
+<div class="commentNavigator">
+  <%= link_to_paginate  "<<", 1, project_id %>
+  <%= navLinkSep   %>
+  <%= link_to_paginate  "<", (pageNumber>1 ? pageNumber-1 : 1), project_id %>
+  <%= navLinkSep   %>
+  <%  priorP.each do |number| %>
+        <%= link_to_paginate number, number, project_id %>
+  <% end %>
+  <strong><%= pageNumber%></strong>
+  <% nextP.each do |number| %>
+        <%= link_to_paginate number, number, project_id %>
+  <% end %>
+  <!-- page numbers -->
+  <%= navLinkSep %>
+  <%= link_to_paginate  ">", 
+                        (pageNumber>=totalPages ? pageNumber : pageNumber+1), 
+                        project_id %>
+  <%= navLinkSep %>
+  <%= link_to_paginate  ">>", totalPages, project_id %>
+</div>
+<% end %>

@@ -1,0 +1,16 @@
+<% 
+  pageNumber   = 1 unless pageNumber 
+  startComment = (pageNumber-1)*ProjectController::COMMENTS_PER_PAGE
+  endComment   = (pageNumber*ProjectController::COMMENTS_PER_PAGE)-1
+  navigator    = render :partial => "comment_navigator", 
+                        :locals  => {:numComments => project.comments.length,
+                                     :project_id  => project.id,
+                                     :pageNumber  => pageNumber} %>
+<%= navigator %>
+<%  (startComment..endComment).each do |index| %>
+  <%= render  :partial => "comment", 
+              :locals=>{:comment => project.comments[index],
+                        :project => project} if index<project.comments.length %>
+<% end %>
+<%= navigator %>
+

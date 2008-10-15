@@ -1,0 +1,25 @@
+<p>
+  <%= link_to "<< return to project", :action => :view, :id => params[:id] %>
+</p>
+
+<% if @project.youtube_videos && @project.youtube_videos.length > 0 %>
+<% block_me "this project's videos", nil, "700px", "300px" do %>
+    <% if @project.youtube_videos %>
+      <% @project.youtube_videos.each do |video_id| %>
+        <div id="video" style="float:left;margin: 0 0 30px 30px" >
+           <% video = Video.find(video_id) rescue nil %>
+	         <img src=<%=  video.thumbnail_url  rescue nil %> style="display:block;" />
+         	 <%= link_to "[remove]", :action => :remove_video, :id => @project.id, :youtube_id => video_id %>
+        </div>          
+      <% end %>
+    <% end %>
+  <% end %>
+<% end %>
+
+<% form_tag do%>
+  <% block_me "Add more videos to your project..." do %>
+    <%= text_field_tag :search_videos  %>
+    <%= submit_tag "Search YouTube" %>
+    <%= set_focus 'search_videos' %>
+  <% end %>
+<% end %>

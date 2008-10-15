@@ -1,0 +1,9 @@
+<% form_tag do %>
+  <div id="search_results" style="margin-left:170px">
+    <% block_me "search" do %>
+      <%= text_field_tag :search_terms %>
+      <%= submit_tag "search" %>
+      <%= set_focus 'search_terms'%>
+    <% end %>
+  </div>
+<% end %>

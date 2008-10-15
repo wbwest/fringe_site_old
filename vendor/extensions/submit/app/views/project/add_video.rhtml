@@ -1,0 +1,31 @@
+<p><%= link_to "<< go back", :action=>:manage_videos, :id=>params[:id]%></p>
+
+<% form_tag do %>
+  <% if @results && @total_results.to_i > 0 %>
+  <% block_me "youtube search results", nil, "80%" do %>
+      <% i=0 %>
+      <table>
+    	<% @results.each do |video| %>
+        <% if i==0 %> 
+        <tr> 
+        <% end %>
+          <td>
+          <%= link_to image_tag(video.group.attributes["thumbnail"][0].attributes["url"], :style => "display:block"), 
+  	      :action => :attach_video, :id => params[:id], :youtube_id => Video.get_id(video.id) %>
+  	    <%= video.title[0..30] %>...
+          </td>
+          <% 
+            i+=1 
+            if i==5 
+  	        i=0
+          %>
+        </tr>
+          <% end %>
+      <% end %>
+  
+      </table>      
+    <% end %>
+  <% else %>
+    <p>sorry, no results found.</p>
+  <% end %>
+<% end %>

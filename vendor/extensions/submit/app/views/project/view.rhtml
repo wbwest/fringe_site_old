@@ -1,0 +1,22 @@
+<% if @project.published || session[:user_id] == @project.user.id %>
+
+  <% form_for :project do |form| %>
+    <%= render :partial=>"publish_message"%>
+    <div class="left_column">
+      <%= render :partial => "project_details" %>
+      <%= render :partial => "control_panel" %>
+      <%= render :partial => "comment_list", :locals => { :project => @project } %>  
+    </div>
+
+    <div class="right_column">
+      <%= render :partial => "voters" %>
+      <%= render :partial => "videos" %>        
+      <%= render :partial => "project_history" %>
+    </div>     
+  <% end %>
+  
+<% else %>
+  <div class="left_column">
+    <p>This project is not available.</p>
+  </div>
+<% end %>
