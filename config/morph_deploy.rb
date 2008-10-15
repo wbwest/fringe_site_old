@@ -20,6 +20,7 @@ set :version_name, Time.now.utc.strftime('%Y-%m-%d %H:%M:%S')
 # You want it to work differently, change the code in the get_code task 
 set :deploy_via, :checkout
 set :scm, :git
+set :git_enable_submodules,1
 
 # MORPH SETTINGS, please do not change
 set :morph_host, "panel.mor.ph"
