@@ -1,4 +1,0 @@
-<% view_all = link_to ("view all (" + @project.votes.size.to_s + ")", :controller=>:profile, :action =>:list, :id=>@project) %>
-<% block_me "project supporters", view_all do %>
-  <%= render :partial => "/profile/user_list", :locals => {:users => @all_voters, :cols => 4, :show_thumbs=>true} %>  
-<% end %>

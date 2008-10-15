@@ -1,9 +1,0 @@
-<% block_me "Latest Projects" do %>
-  <ul>
-      <% for project in @latest_projects %>
-      <li>
-          <%= link_to project.title, :controller => :project, :action => :view, :id => project.id %>       
-      </li>
-    <% end %>
-  </ul>
-<% end %>
