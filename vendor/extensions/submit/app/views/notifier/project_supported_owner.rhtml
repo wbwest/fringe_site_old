@@ -1,0 +1,10 @@
+Dear <%= @project.user.first_name %>,
+
+Your project - <%= @project.title %> - has a new supporter: <%= @voter.full_name %>.
+
+You can learn more about <%= @voter.first_name %> at:
+<%= @voter_url %>
+
+Thanks!
+
+The Fringe Team

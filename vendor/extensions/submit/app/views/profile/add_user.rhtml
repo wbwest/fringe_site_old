@@ -1,0 +1,40 @@
+<% title "Create an Account"%>
+<%= render :partial => "layouts/flash_alert" %>
+<%= error_messages_for 'user' %>
+    
+<p> already a user?
+  <%= link_to "login", :action => :login %>
+</p>
+
+<% block_me "create your account", nil, "700px" do %>
+    <%form_for :user do |form| %>
+      <p>
+        <label for="email_address">Email Address:</label>
+        <%= form.text_field :email, :size => 60 %>
+        <%= set_focus 'user_email' %>
+      </p>
+		
+      <p>
+        <label for="user_first_name">First Name:</label>
+        <%= form.text_field :first_name, :size => 40 %>
+      </p>
+		
+      <p>
+        <label for="user_last_name">Last Name:</label>
+        <%= form.text_field :last_name, :size => 40 %>
+      </p>
+		
+      <p>
+        <label for="user_password">Password:</label>
+        <%= form.password_field :password, :size => 40 %>
+      </p>
+		
+      <p>
+        <label for="user_password_confirmation">Password Confirm:</label>
+        <%= form.password_field :password_confirmation, :size => 40 %>
+      </p>
+		
+      <%= submit_tag "Create Account", :class=>"submit" %>
+	
+    <% end %>
+<% end %>

@@ -1,0 +1,8 @@
+<div class="left_column">
+  <p>
+    <%= link_to "<< back", :action=>:view, :id=>params[:project_id] %>
+  </p>
+  <% block_me "project video", nil, "700px" do%>
+    <%= render :partial => "youtube_embed", :locals => {:youtube_id => params[:id], :width => "480", :height => "400" } %>
+  <% end %>
+</div>

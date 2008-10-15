@@ -1,0 +1,15 @@
+<% if @profile_user.voted_projects.count > 0 %>
+  <% block_me "projects " +  @profile_user.first_name.downcase + " supports" do %>
+
+        <ul>
+          <% for project in @voted_projects %>
+            <li>
+              <%= link_to project.title,:controller => :project, :action => :view, :id => project.id %>
+              by
+              <%= link_to project.user.full_name, :controller => :profile,  :action => :view, :id => project.user.id  %>
+            </li>
+          <% end %>
+        </ul>
+      
+  <% end %>
+<% end %>

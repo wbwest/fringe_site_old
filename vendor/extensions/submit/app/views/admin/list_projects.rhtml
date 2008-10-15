@@ -1,0 +1,20 @@
+<div class="left_column">
+  <p>
+    <%= link_to "<< back", :action=>:index %>
+  </p>
+
+  <% block_me "all projects" do %>
+    <table>
+      <% for project in @projects %>
+        <tr>
+          <td style="width:500px"><%= link_to project.title, :controller => :project, :action => :view, :id => project.id %></td>
+          <td><%= link_to "edit",   :controller => :project, :action => :edit,   :id => project.id %></td>
+          <td><%= link_to "delete", 
+                  {:controller => :project, :action => :delete, :id => project.id}, 
+                  :confirm => "delete '#{project.title}' are you sure?", :post => true %>
+          </td>
+        </tr>
+      <% end %>
+    </table>
+  <% end %>
+</div>

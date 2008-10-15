@@ -1,0 +1,11 @@
+<% if @profile_user.id == session[:user_id] && @profile_user.drafts.count > 0 %>
+  <% block_me "draft projects" do %>
+      <ul>
+      <% for project in @draft_projects %>
+        <li>
+          <%= link_to project.title, :controller => :project, :action => :view, :id => project.id %>
+        </li>
+      <% end %>
+    </ul>
+  <% end %>
+<% end %>

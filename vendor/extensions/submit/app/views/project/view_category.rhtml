@@ -1,0 +1,21 @@
+<% title @category.name %>
+
+<div class="left_column">
+  <% block_me @category.name do %>
+    <p><%=@category.formatted_description  %></p>
+    <p><%= link_to "<< back",  request.env["HTTP_REFERER"]  if request.env["HTTP_REFERER"]%><p>
+  <% end %>
+</div>
+
+<div class="right_column">  
+  <% block_me "projects" do%>
+    <ul>
+    <% @projects.each do |project|  %>
+      <li>
+        <%= link_to project.title, :action=>:view, :id=>project %>
+      </li>
+    <% end %>
+    </ul>
+    <%= will_paginate @projects %>
+  <% end %>
+</div>

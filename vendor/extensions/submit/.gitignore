@@ -1,0 +1,4 @@
+*.log
+public/images/users/*
+index/*
+*.tmproj

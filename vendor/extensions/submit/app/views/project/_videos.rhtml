@@ -1,0 +1,15 @@
+<%
+  has_videos = true if @project.youtube_videos? && @project.youtube_videos.length > 0
+  is_authenticated = true if session[:user_id]
+  is_owner = true if @project.user_id == session[:user_id]
+  manage_link = link_to "manage videos", {:action => :manage_videos, :id => @project} if is_owner
+%>
+
+<% if has_videos %>
+  <% block_me "project videos", manage_link, "700px" do %>
+	  <% @project.youtube_videos.each do |video_id| %>
+	    <% video = Video.find video_id %>
+	    <%= link_to image_tag(video.thumbnail_url), :action=>:view_video, :id=>video_id, :project_id=>@project rescue nil %>
+    <% end %>      
+  <%end%>
+<% end %>

@@ -1,0 +1,14 @@
+<% if session[:user_id] && User.find_by_id(session[:user_id]).new_user %>
+  <% form_tag do %>
+    <fieldset id="welcome_message" style="margin-bottom:20px">
+      <legend>how does this work?
+        <%= submit_to_remote "close_welcome_message", "close", 
+            :url =>  {:controller => :profile, :action => :close_welcome_message, :id => session[:user_id] },
+            :complete => "Effect.Fade('welcome_message')" %>
+        </legend>
+      <p>On this website, you can learn about all the shows vying to perform in the first annual Hollywood Fringe Festival</p>
+      <p>Want to apply to the fringe? Click the "apply" link above, and start imagining your project immediately.</p>
+      <p>Thanks for joining us and see you in Summer 2009!</p>
+    </fieldset>
+  <% end %>
+<% end %>

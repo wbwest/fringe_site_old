@@ -1,0 +1,12 @@
+<% unless @project.published? %>
+<div id="publish_message">
+  <% block_me nil, nil, "850px" do%>    
+  
+    <p>
+      This is a private project. To submit this project to the world, 
+      <%= link_to "publish", :action => :publish, :id => @project %>
+      it now.
+    </p>
+  <% end %>
+</div>
+<% end %>

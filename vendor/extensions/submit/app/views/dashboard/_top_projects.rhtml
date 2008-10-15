@@ -1,0 +1,13 @@
+<% block_me "Top Ranked Projects" do %>
+  <div style="height:200px">
+    <ul>
+      <% for project in @ranked_projects %>
+          <li>
+          <%= link_to project.title, :controller => :project, :action => :view, :id => project.id %>        
+          (<%= project.votes.size %> votes)
+        </li>
+      <% end %>  
+    </ul>    
+  </div>
+  <%= will_paginate @ranked_projects %>
+<% end %>

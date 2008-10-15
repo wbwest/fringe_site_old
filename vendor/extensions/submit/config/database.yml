@@ -1,0 +1,22 @@
+development:
+  adapter: mysql
+  database: fringe_development
+  username: root
+  password: r1v2l3t45n
+  host: 127.0.0.1
+
+test:
+  adapter: mysql
+  database: fringe_test
+  username: root
+  password: r1v2l3t45n
+  host: localhost
+  socket: /var/run/mysqld/mysqld.sock
+
+production:
+  adapter: mysql
+  database: db_1_2479
+  username: user_2479
+  password: uwwmdu6d
+  host: 10.251.69.235
+  #socket: /var/run/mysqld/mysqld.sock

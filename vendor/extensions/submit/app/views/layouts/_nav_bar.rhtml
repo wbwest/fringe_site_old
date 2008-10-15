@@ -1,0 +1,11 @@
+<%
+  ["login","add_user","add_project", "edit", "choose_picture","upload_image","add_video", "assign_category", "manage_videos"].each do |action|
+    return if params[:action] == action || params[:controller] == "admin" 
+  end
+%>
+
+<div class="nav_bar">
+  <%= render :partial => "profile/create_project" %>
+  <%= render :partial => "layouts/links" %>
+  <%= render :partial => "layouts/adsense" %>
+</div>
