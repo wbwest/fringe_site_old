@@ -34749,3 +34749,426 @@ Completed in 0.02205 (45 reqs/sec) | Rendering: 0.01731 (78%) | DB: 0.01554 (70%
   [4;35;1mArchiveYearIndexPage Columns (0.005503)[0m   [0mSHOW FIELDS FROM `pages`[0m
   [4;36;1mSQL (0.000686)[0m   [0;1mSHOW TABLES[0m
   [4;35;1mSQL (0.000481)[0m   [0mSELECT DISTINCT class_name FROM pages WHERE class_name <> '' AND class_name IS NOT NULL[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000186)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000615)[0m   [0mSHOW TABLES[0m
+  [4;36;1mPage Columns (0.005150)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+  [4;35;1mSQL (0.000692)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSnippet Columns (0.002519)[0m   [0;1mSHOW FIELDS FROM `snippets`[0m
+  [4;35;1mRadiant::Config Columns (0.002564)[0m   [0mSHOW FIELDS FROM `config`[0m
+  [4;36;1mRadiant::Config Load (0.001622)[0m   [0;1mSELECT * FROM `config` WHERE (`config`.`key` = 'comments.filters_enabled') LIMIT 1[0m
+  [4;35;1mRadiant::Config Load (0.000427)[0m   [0mSELECT * FROM `config` WHERE (`config`.`key` = 'comments.notification') LIMIT 1[0m
+  [4;36;1mRadiant::Config Load (0.000408)[0m   [0;1mSELECT * FROM `config` WHERE (`config`.`key` = 'comments.notification_from') LIMIT 1[0m
+  [4;35;1mRadiant::Config Load (0.000332)[0m   [0mSELECT * FROM `config` WHERE (`config`.`key` = 'comments.akismet_url') LIMIT 1[0m
+  [4;36;1mRadiant::Config Load (0.000407)[0m   [0;1mSELECT * FROM `config` WHERE (`config`.`key` = 'comments.notification_to') LIMIT 1[0m
+  [4;35;1mRadiant::Config Load (0.000334)[0m   [0mSELECT * FROM `config` WHERE (`config`.`key` = 'comments.akismet_key') LIMIT 1[0m
+  [4;36;1mRadiant::Config Load (0.000325)[0m   [0;1mSELECT * FROM `config` WHERE (`config`.`key` = 'comments.notification_site_name') LIMIT 1[0m
+  [4;35;1mSQL (0.000839)[0m   [0mSHOW TABLES[0m
+  [4;36;1mArchiveYearIndexPage Columns (0.004569)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+  [4;35;1mSQL (0.000691)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.000480)[0m   [0;1mSELECT DISTINCT class_name FROM pages WHERE class_name <> '' AND class_name IS NOT NULL[0m
+
+
+Processing ApplicationController#show_page (for 127.0.0.1 at 2008-10-14 21:43:07) [GET]
+  Session ID: d34dd1162fc4ba341316b41e1afa468b
+  Parameters: {"action"=>"show_page", "url"=>"/", "controller"=>"site"}
+
+
+NameError (undefined local variable or method `no_login_required' for SiteController:Class):
+    /vendor/radiant/app/controllers/site_controller.rb:5
+    /vendor/radiant/vendor/rails/activesupport/lib/active_support/dependencies.rb:203:in `load_without_new_constant_marking'
+    /vendor/radiant/vendor/rails/activesupport/lib/active_support/dependencies.rb:203:in `load_file'
+    /vendor/radiant/vendor/rails/activesupport/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /vendor/radiant/vendor/rails/activesupport/lib/active_support/dependencies.rb:202:in `load_file'
+    /vendor/radiant/vendor/rails/activesupport/lib/active_support/dependencies.rb:94:in `require_or_load'
+    /vendor/radiant/vendor/rails/activesupport/lib/active_support/dependencies.rb:248:in `load_missing_constant'
+    /vendor/radiant/vendor/rails/activesupport/lib/active_support/dependencies.rb:453:in `const_missing'
+    /vendor/radiant/vendor/rails/activesupport/lib/active_support/dependencies.rb:465:in `const_missing'
+    /vendor/radiant/vendor/rails/activesupport/lib/active_support/inflector.rb:257:in `constantize'
+    /vendor/radiant/vendor/rails/activesupport/lib/active_support/core_ext/string/inflections.rb:148:in `constantize'
+    /vendor/radiant/vendor/rails/actionpack/lib/action_controller/routing.rb:1426:in `recognize'
+    /vendor/radiant/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:170:in `handle_request'
+    /vendor/radiant/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    /vendor/radiant/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    /vendor/radiant/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /vendor/radiant/vendor/rails/activesupport/lib/active_support/dependencies.rb:489:in `load'
+    /vendor/radiant/vendor/rails/activesupport/lib/active_support/dependencies.rb:489:in `load'
+    /vendor/radiant/vendor/rails/activesupport/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /vendor/radiant/vendor/rails/activesupport/lib/active_support/dependencies.rb:489:in `load'
+    /vendor/radiant/vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `require'
+    /vendor/radiant/vendor/rails/activesupport/lib/active_support/dependencies.rb:496:in `require'
+    /vendor/radiant/vendor/rails/activesupport/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /vendor/radiant/vendor/rails/activesupport/lib/active_support/dependencies.rb:496:in `require'
+    /vendor/radiant/vendor/rails/railties/lib/commands/server.rb:39
+    script/server:3:in `require'
+    script/server:3
+
+Rendering /src/fring_site/vendor/radiant/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+  [4;35;1mSQL (0.000819)[0m   [0mSHOW TABLES[0m
+  [4;36;1mPage Columns (0.003797)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+  [4;35;1mRadiant::Config Load (0.000538)[0m   [0mSELECT * FROM `config` WHERE (`config`.`key` = 'comments.filters_enabled') LIMIT 1[0m
+  [4;36;1mRadiant::Config Load (0.000348)[0m   [0;1mSELECT * FROM `config` WHERE (`config`.`key` = 'comments.notification') LIMIT 1[0m
+  [4;35;1mRadiant::Config Load (0.000347)[0m   [0mSELECT * FROM `config` WHERE (`config`.`key` = 'comments.notification_from') LIMIT 1[0m
+  [4;36;1mRadiant::Config Load (0.000407)[0m   [0;1mSELECT * FROM `config` WHERE (`config`.`key` = 'comments.akismet_url') LIMIT 1[0m
+  [4;35;1mRadiant::Config Load (0.000357)[0m   [0mSELECT * FROM `config` WHERE (`config`.`key` = 'comments.notification_to') LIMIT 1[0m
+  [4;36;1mRadiant::Config Load (0.000348)[0m   [0;1mSELECT * FROM `config` WHERE (`config`.`key` = 'comments.akismet_key') LIMIT 1[0m
+  [4;35;1mRadiant::Config Load (0.000430)[0m   [0mSELECT * FROM `config` WHERE (`config`.`key` = 'comments.notification_site_name') LIMIT 1[0m
+  [4;36;1mSQL (0.000678)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mArchiveYearIndexPage Columns (0.004697)[0m   [0mSHOW FIELDS FROM `pages`[0m
+  [4;36;1mSQL (0.000687)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.000478)[0m   [0mSELECT DISTINCT class_name FROM pages WHERE class_name <> '' AND class_name IS NOT NULL[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000234)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000611)[0m   [0mSHOW TABLES[0m
+  [4;36;1mPage Columns (0.004933)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+  [4;35;1mSQL (0.000664)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSnippet Columns (0.003468)[0m   [0;1mSHOW FIELDS FROM `snippets`[0m
+  [4;35;1mRadiant::Config Columns (0.003768)[0m   [0mSHOW FIELDS FROM `config`[0m
+  [4;36;1mRadiant::Config Load (0.001944)[0m   [0;1mSELECT * FROM `config` WHERE (`config`.`key` = 'comments.filters_enabled') LIMIT 1[0m
+  [4;35;1mRadiant::Config Load (0.000617)[0m   [0mSELECT * FROM `config` WHERE (`config`.`key` = 'comments.notification') LIMIT 1[0m
+  [4;36;1mRadiant::Config Load (0.000577)[0m   [0;1mSELECT * FROM `config` WHERE (`config`.`key` = 'comments.notification_from') LIMIT 1[0m
+  [4;35;1mRadiant::Config Load (0.000556)[0m   [0mSELECT * FROM `config` WHERE (`config`.`key` = 'comments.akismet_url') LIMIT 1[0m
+  [4;36;1mRadiant::Config Load (0.000560)[0m   [0;1mSELECT * FROM `config` WHERE (`config`.`key` = 'comments.notification_to') LIMIT 1[0m
+  [4;35;1mRadiant::Config Load (0.000547)[0m   [0mSELECT * FROM `config` WHERE (`config`.`key` = 'comments.akismet_key') LIMIT 1[0m
+  [4;36;1mRadiant::Config Load (0.000627)[0m   [0;1mSELECT * FROM `config` WHERE (`config`.`key` = 'comments.notification_site_name') LIMIT 1[0m
+  [4;35;1mSQL (0.000697)[0m   [0mSHOW TABLES[0m
+  [4;36;1mArchiveYearIndexPage Columns (0.004562)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+  [4;35;1mSQL (0.000682)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.000481)[0m   [0;1mSELECT DISTINCT class_name FROM pages WHERE class_name <> '' AND class_name IS NOT NULL[0m
+
+
+Processing SiteController#show_page (for 127.0.0.1 at 2008-10-14 21:44:25) [GET]
+  Parameters: {"url"=>"/", "action"=>"show_page", "controller"=>"site"}
+  [4;35;1mRadiant::Config Load (0.000498)[0m   [0mSELECT * FROM `config` WHERE (`config`.`key` = 'dev.host') LIMIT 1[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `config` WHERE (`config`.`key` = 'dev.host') LIMIT 1[0m
+  [4;35;1mPage Load (0.001067)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`parent_id` IS NULL) LIMIT 1[0m
+  [4;36;1mSQL (0.000641)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mLayout Columns (0.004688)[0m   [0mSHOW FIELDS FROM `layouts`[0m
+  [4;36;1mLayout Load (0.001188)[0m   [0;1mSELECT * FROM `layouts` WHERE (`layouts`.`id` = 1) ORDER BY name[0m
+  [4;35;1mSQL (0.000948)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSnippet Load (0.000818)[0m   [0;1mSELECT * FROM `snippets` WHERE (`snippets`.`name` = 'analytics') LIMIT 1[0m
+  [4;35;1mSnippet Load (0.000798)[0m   [0mSELECT * FROM `snippets` WHERE (`snippets`.`name` = 'header') LIMIT 1[0m
+  [4;36;1mPagePart Load (0.000863)[0m   [0;1mSELECT * FROM `page_parts` WHERE (page_parts.page_id = 1) ORDER BY id[0m
+  [4;35;1mPagePart Columns (0.002120)[0m   [0mSHOW FIELDS FROM `page_parts`[0m
+  [4;36;1mPagePart Load (0.000585)[0m   [0;1mSELECT * FROM `page_parts` WHERE (page_parts.page_id = 1) AND (`page_parts`.`name` = 'body') ORDER BY id LIMIT 1[0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`parent_id` IS NULL) LIMIT 1[0m
+  [4;36;1mPage Load (0.002246)[0m   [0;1mSELECT * FROM `pages` WHERE (pages.parent_id = 1) AND (`pages`.`slug` = 'articles') ORDER BY virtual DESC, title ASC LIMIT 1[0m
+  [4;35;1mArchivePage Columns (0.003344)[0m   [0mSHOW FIELDS FROM `pages`[0m
+  [4;36;1mPage Load (0.001096)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;35;1mPage Load (0.001680)[0m   [0mSELECT * FROM `pages` WHERE (pages.parent_id = 4 AND ((virtual = 0) and (status_id = 100))) ORDER BY published_at DESC, virtual DESC, title ASC LIMIT 1[0m
+  [4;36;1mPage Load (0.001239)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`id` = 4) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;36;1mPagePart Load (0.000741)[0m   [0;1mSELECT * FROM `page_parts` WHERE (page_parts.page_id = 43) ORDER BY id[0m
+  [4;35;1mPagePart Load (0.000588)[0m   [0mSELECT * FROM `page_parts` WHERE (page_parts.page_id = 43) AND (`page_parts`.`name` = 'body') ORDER BY id LIMIT 1[0m
+  [4;36;1mPagePart Load (0.000724)[0m   [0;1mSELECT * FROM `page_parts` WHERE (page_parts.page_id = 43) AND (`page_parts`.`name` = 'extended') ORDER BY id LIMIT 1[0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `page_parts` WHERE (page_parts.page_id = 43) AND (`page_parts`.`name` = 'extended') ORDER BY id LIMIT 1[0m
+  [4;36;1mUser Columns (0.004822)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.001549)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY name[0m
+  [4;36;1mRadiant::Config Load (0.000604)[0m   [0;1mSELECT * FROM `config` WHERE (`config`.`key` = 'local.timezone') LIMIT 1[0m
+  [4;35;1mPage Load (0.002489)[0m   [0mSELECT * FROM `pages` WHERE (pages.parent_id = 4 AND ((virtual = 0) and (status_id = 100))) ORDER BY published_at DESC, virtual DESC, title ASC LIMIT 1, 4[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`id` = 4) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;36;1mPagePart Load (0.001031)[0m   [0;1mSELECT * FROM `page_parts` WHERE (page_parts.page_id = 42) ORDER BY id[0m
+  [4;35;1mPagePart Load (0.001047)[0m   [0mSELECT * FROM `page_parts` WHERE (page_parts.page_id = 42) AND (`page_parts`.`name` = 'body') ORDER BY id LIMIT 1[0m
+  [4;36;1mSnippet Load (0.001265)[0m   [0;1mSELECT * FROM `snippets` WHERE (`snippets`.`name` = 'comments') LIMIT 1[0m
+  [4;35;1mComment Columns (0.004274)[0m   [0mSHOW FIELDS FROM `comments`[0m
+  [4;36;1mSQL (0.000602)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (comments.page_id = 42 AND (comments.approved_at IS NOT NULL)) [0m
+  [4;35;1mComment Load (0.001793)[0m   [0mSELECT * FROM `comments` WHERE (comments.page_id = 42 AND (comments.approved_at IS NOT NULL)) ORDER BY created_at ASC[0m
+  [4;36;1mSnippet Load (0.001277)[0m   [0;1mSELECT * FROM `snippets` WHERE (`snippets`.`name` = 'comment') LIMIT 1[0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `snippets` WHERE (`snippets`.`name` = 'comment') LIMIT 1[0m
+  [4;36;1mSnippet Load (0.000803)[0m   [0;1mSELECT * FROM `snippets` WHERE (`snippets`.`name` = 'comment_form') LIMIT 1[0m
+  [4;35;1mPagePart Load (0.000739)[0m   [0mSELECT * FROM `page_parts` WHERE (page_parts.page_id = 42) AND (`page_parts`.`name` = 'extended') ORDER BY id LIMIT 1[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `page_parts` WHERE (page_parts.page_id = 42) AND (`page_parts`.`name` = 'extended') ORDER BY id LIMIT 1[0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY name[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `config` WHERE (`config`.`key` = 'local.timezone') LIMIT 1[0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`id` = 4) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;35;1mPagePart Load (0.000815)[0m   [0mSELECT * FROM `page_parts` WHERE (page_parts.page_id = 41) ORDER BY id[0m
+  [4;36;1mPagePart Load (0.000621)[0m   [0;1mSELECT * FROM `page_parts` WHERE (page_parts.page_id = 41) AND (`page_parts`.`name` = 'body') ORDER BY id LIMIT 1[0m
+  [4;35;1mPagePart Load (0.000734)[0m   [0mSELECT * FROM `page_parts` WHERE (page_parts.page_id = 41) AND (`page_parts`.`name` = 'extended') ORDER BY id LIMIT 1[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `page_parts` WHERE (page_parts.page_id = 41) AND (`page_parts`.`name` = 'extended') ORDER BY id LIMIT 1[0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY name[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `config` WHERE (`config`.`key` = 'local.timezone') LIMIT 1[0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`id` = 4) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;35;1mPagePart Load (0.000667)[0m   [0mSELECT * FROM `page_parts` WHERE (page_parts.page_id = 38) ORDER BY id[0m
+  [4;36;1mPagePart Load (0.000591)[0m   [0;1mSELECT * FROM `page_parts` WHERE (page_parts.page_id = 38) AND (`page_parts`.`name` = 'body') ORDER BY id LIMIT 1[0m
+  [4;35;1mPagePart Load (0.000851)[0m   [0mSELECT * FROM `page_parts` WHERE (page_parts.page_id = 38) AND (`page_parts`.`name` = 'extended') ORDER BY id LIMIT 1[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `page_parts` WHERE (page_parts.page_id = 38) AND (`page_parts`.`name` = 'extended') ORDER BY id LIMIT 1[0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY name[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `config` WHERE (`config`.`key` = 'local.timezone') LIMIT 1[0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`id` = 4) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;35;1mPagePart Load (0.000636)[0m   [0mSELECT * FROM `page_parts` WHERE (page_parts.page_id = 37) ORDER BY id[0m
+  [4;36;1mPagePart Load (0.000557)[0m   [0;1mSELECT * FROM `page_parts` WHERE (page_parts.page_id = 37) AND (`page_parts`.`name` = 'body') ORDER BY id LIMIT 1[0m
+  [4;35;1mPagePart Load (0.000724)[0m   [0mSELECT * FROM `page_parts` WHERE (page_parts.page_id = 37) AND (`page_parts`.`name` = 'extended') ORDER BY id LIMIT 1[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `page_parts` WHERE (page_parts.page_id = 37) AND (`page_parts`.`name` = 'extended') ORDER BY id LIMIT 1[0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) ORDER BY name[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `config` WHERE (`config`.`key` = 'local.timezone') LIMIT 1[0m
+  [4;35;1mPagePart Load (0.000862)[0m   [0mSELECT * FROM `page_parts` WHERE (page_parts.page_id = 1) AND (`page_parts`.`name` = 'extended') ORDER BY id LIMIT 1[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `page_parts` WHERE (page_parts.page_id = 1) AND (`page_parts`.`name` = 'extended') ORDER BY id LIMIT 1[0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `snippets` WHERE (`snippets`.`name` = 'comments') LIMIT 1[0m
+  [4;36;1mSQL (0.000357)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (comments.page_id = 1 AND (comments.approved_at IS NOT NULL)) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `snippets` WHERE (`snippets`.`name` = 'comment_form') LIMIT 1[0m
+  [4;36;1mPagePart Load (0.000714)[0m   [0;1mSELECT * FROM `page_parts` WHERE (page_parts.page_id = 1) AND (`page_parts`.`name` = 'sidebar') ORDER BY id LIMIT 1[0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `page_parts` WHERE (page_parts.page_id = 1) AND (`page_parts`.`name` = 'sidebar') ORDER BY id LIMIT 1[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`parent_id` IS NULL) LIMIT 1[0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `pages` WHERE (pages.parent_id = 1) AND (`pages`.`slug` = 'articles') ORDER BY virtual DESC, title ASC LIMIT 1[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;35;1mPage Load (0.002319)[0m   [0mSELECT * FROM `pages` WHERE (pages.parent_id = 4 AND ((virtual = 0) and (status_id = 100))) ORDER BY published_at DESC, virtual DESC, title ASC LIMIT 5, 10[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`id` = 4) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`id` = 4) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`id` = 4) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`id` = 4) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`id` = 4) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`id` = 4) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`id` = 4) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`id` = 4) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`id` = 4) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`id` = 4) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;36;1mSnippet Load (0.000861)[0m   [0;1mSELECT * FROM `snippets` WHERE (`snippets`.`name` = 'footer') LIMIT 1[0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `config` WHERE (`config`.`key` = 'local.timezone') LIMIT 1[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `config` WHERE (`config`.`key` = 'dev.host') LIMIT 1[0m
+Cached page: /src/fring_site/cache/_site-root (0.00054)
+Completed in 0.48329 (2 reqs/sec) | DB: 0.08500 (17%) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.000750)[0m   [0mSHOW TABLES[0m
+  [4;36;1mPage Columns (0.003268)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+  [4;35;1mRadiant::Config Load (0.000624)[0m   [0mSELECT * FROM `config` WHERE (`config`.`key` = 'comments.filters_enabled') LIMIT 1[0m
+  [4;36;1mRadiant::Config Load (0.000387)[0m   [0;1mSELECT * FROM `config` WHERE (`config`.`key` = 'comments.notification') LIMIT 1[0m
+  [4;35;1mRadiant::Config Load (0.000345)[0m   [0mSELECT * FROM `config` WHERE (`config`.`key` = 'comments.notification_from') LIMIT 1[0m
+  [4;36;1mRadiant::Config Load (0.000343)[0m   [0;1mSELECT * FROM `config` WHERE (`config`.`key` = 'comments.akismet_url') LIMIT 1[0m
+  [4;35;1mRadiant::Config Load (0.000348)[0m   [0mSELECT * FROM `config` WHERE (`config`.`key` = 'comments.notification_to') LIMIT 1[0m
+  [4;36;1mRadiant::Config Load (0.000349)[0m   [0;1mSELECT * FROM `config` WHERE (`config`.`key` = 'comments.akismet_key') LIMIT 1[0m
+  [4;35;1mRadiant::Config Load (0.000348)[0m   [0mSELECT * FROM `config` WHERE (`config`.`key` = 'comments.notification_site_name') LIMIT 1[0m
+  [4;36;1mSQL (0.000978)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mArchiveYearIndexPage Columns (0.003323)[0m   [0mSHOW FIELDS FROM `pages`[0m
+  [4;36;1mSQL (0.000769)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.000535)[0m   [0mSELECT DISTINCT class_name FROM pages WHERE class_name <> '' AND class_name IS NOT NULL[0m
+
+
+Processing SiteController#show_page (for 127.0.0.1 at 2008-10-14 21:44:25) [GET]
+  Parameters: {"url"=>["styles.css"], "action"=>"show_page", "controller"=>"site"}
+  [4;36;1mRadiant::Config Load (0.000499)[0m   [0;1mSELECT * FROM `config` WHERE (`config`.`key` = 'dev.host') LIMIT 1[0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `config` WHERE (`config`.`key` = 'dev.host') LIMIT 1[0m
+  [4;36;1mPage Load (0.001100)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`parent_id` IS NULL) LIMIT 1[0m
+  [4;35;1mPage Load (0.001262)[0m   [0mSELECT * FROM `pages` WHERE (pages.parent_id = 1) AND (`pages`.`slug` = 'styles.css') ORDER BY virtual DESC, title ASC LIMIT 1[0m
+  [4;36;1mPage Load (0.001064)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;35;1mSQL (0.000753)[0m   [0mSHOW TABLES[0m
+  [4;36;1mLayout Columns (0.004114)[0m   [0;1mSHOW FIELDS FROM `layouts`[0m
+  [4;35;1mLayout Load (0.001067)[0m   [0mSELECT * FROM `layouts` WHERE (`layouts`.`id` = 2) ORDER BY name[0m
+  [4;36;1mSQL (0.000961)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mPagePart Load (0.000850)[0m   [0mSELECT * FROM `page_parts` WHERE (page_parts.page_id = 7) ORDER BY id[0m
+  [4;36;1mPagePart Columns (0.003162)[0m   [0;1mSHOW FIELDS FROM `page_parts`[0m
+  [4;35;1mPagePart Load (0.001204)[0m   [0mSELECT * FROM `page_parts` WHERE (page_parts.page_id = 7) AND (`page_parts`.`name` = 'body') ORDER BY id LIMIT 1[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `config` WHERE (`config`.`key` = 'dev.host') LIMIT 1[0m
+Cached page: /src/fring_site/cache/styles.css (0.00122)
+Completed in 0.06694 (14 reqs/sec) | DB: 0.02840 (42%) | 200 OK [http://localhost/styles.css]
+  [4;35;1mSQL (0.000721)[0m   [0mSHOW TABLES[0m
+  [4;36;1mPage Columns (0.004341)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+  [4;35;1mRadiant::Config Load (0.000647)[0m   [0mSELECT * FROM `config` WHERE (`config`.`key` = 'comments.filters_enabled') LIMIT 1[0m
+  [4;36;1mRadiant::Config Load (0.000380)[0m   [0;1mSELECT * FROM `config` WHERE (`config`.`key` = 'comments.notification') LIMIT 1[0m
+  [4;35;1mRadiant::Config Load (0.000345)[0m   [0mSELECT * FROM `config` WHERE (`config`.`key` = 'comments.notification_from') LIMIT 1[0m
+  [4;36;1mRadiant::Config Load (0.000395)[0m   [0;1mSELECT * FROM `config` WHERE (`config`.`key` = 'comments.akismet_url') LIMIT 1[0m
+  [4;35;1mRadiant::Config Load (0.000371)[0m   [0mSELECT * FROM `config` WHERE (`config`.`key` = 'comments.notification_to') LIMIT 1[0m
+  [4;36;1mRadiant::Config Load (0.000343)[0m   [0;1mSELECT * FROM `config` WHERE (`config`.`key` = 'comments.akismet_key') LIMIT 1[0m
+  [4;35;1mRadiant::Config Load (0.000361)[0m   [0mSELECT * FROM `config` WHERE (`config`.`key` = 'comments.notification_site_name') LIMIT 1[0m
+  [4;36;1mSQL (0.000637)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mArchiveYearIndexPage Columns (0.005775)[0m   [0mSHOW FIELDS FROM `pages`[0m
+  [4;36;1mSQL (0.000681)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.000477)[0m   [0mSELECT DISTINCT class_name FROM pages WHERE class_name <> '' AND class_name IS NOT NULL[0m
+
+
+Processing SiteController#show_page (for 127.0.0.1 at 2008-10-14 21:44:26) [GET]
+  Parameters: {"url"=>["images", "rss.jpg"], "action"=>"show_page", "controller"=>"site"}
+  [4;36;1mRadiant::Config Load (0.000999)[0m   [0;1mSELECT * FROM `config` WHERE (`config`.`key` = 'dev.host') LIMIT 1[0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `config` WHERE (`config`.`key` = 'dev.host') LIMIT 1[0m
+  [4;36;1mPage Load (0.002319)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`parent_id` IS NULL) LIMIT 1[0m
+  [4;35;1mPage Load (0.001698)[0m   [0mSELECT * FROM `pages` WHERE (pages.parent_id = 1) AND (`pages`.`slug` = 'images') ORDER BY virtual DESC, title ASC LIMIT 1[0m
+  [4;36;1mPage Load (0.001945)[0m   [0;1mSELECT * FROM `pages` WHERE (pages.parent_id = 1) ORDER BY virtual DESC, title ASC[0m
+  [4;35;1mPage Load (0.001095)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;35;1mArchivePage Columns (0.006706)[0m   [0mSHOW FIELDS FROM `pages`[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;36;1mSQL (0.001057)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mPage Load (0.001852)[0m   [0mSELECT * FROM `pages` WHERE (pages.parent_id = 1 AND (status_id = 100 and (class_name = 'FileNotFoundPage'))) ORDER BY virtual DESC, title ASC LIMIT 1[0m
+  [4;36;1mFileNotFoundPage Columns (0.004581)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;36;1mLayout Columns (0.003214)[0m   [0;1mSHOW FIELDS FROM `layouts`[0m
+  [4;35;1mLayout Load (0.002114)[0m   [0mSELECT * FROM `layouts` WHERE (`layouts`.`id` = 1) ORDER BY name[0m
+  [4;36;1mSQL (0.000818)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSnippet Columns (0.003616)[0m   [0mSHOW FIELDS FROM `snippets`[0m
+  [4;36;1mSnippet Load (0.001088)[0m   [0;1mSELECT * FROM `snippets` WHERE (`snippets`.`name` = 'analytics') LIMIT 1[0m
+  [4;35;1mSnippet Load (0.000787)[0m   [0mSELECT * FROM `snippets` WHERE (`snippets`.`name` = 'header') LIMIT 1[0m
+  [4;36;1mPagePart Load (0.000894)[0m   [0;1mSELECT * FROM `page_parts` WHERE (page_parts.page_id = 2) ORDER BY id[0m
+  [4;35;1mPagePart Columns (0.001965)[0m   [0mSHOW FIELDS FROM `page_parts`[0m
+  [4;36;1mPagePart Load (0.000584)[0m   [0;1mSELECT * FROM `page_parts` WHERE (page_parts.page_id = 2) AND (`page_parts`.`name` = 'body') ORDER BY id LIMIT 1[0m
+  [4;35;1mPagePart Load (0.000774)[0m   [0mSELECT * FROM `page_parts` WHERE (page_parts.page_id = 2) AND (`page_parts`.`name` = 'extended') ORDER BY id LIMIT 1[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `page_parts` WHERE (page_parts.page_id = 2) AND (`page_parts`.`name` = 'extended') ORDER BY id LIMIT 1[0m
+  [4;35;1mSnippet Load (0.000775)[0m   [0mSELECT * FROM `snippets` WHERE (`snippets`.`name` = 'comments') LIMIT 1[0m
+  [4;36;1mComment Columns (0.003892)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (0.001037)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (comments.page_id = 2 AND (comments.approved_at IS NOT NULL)) [0m
+  [4;36;1mSnippet Load (0.001065)[0m   [0;1mSELECT * FROM `snippets` WHERE (`snippets`.`name` = 'comment_form') LIMIT 1[0m
+  [4;35;1mPagePart Load (0.000956)[0m   [0mSELECT * FROM `page_parts` WHERE (page_parts.page_id = 2) AND (`page_parts`.`name` = 'sidebar') ORDER BY id LIMIT 1[0m
+  [4;36;1mPagePart Load (0.000601)[0m   [0;1mSELECT * FROM `page_parts` WHERE (page_parts.page_id = 1) ORDER BY id[0m
+  [4;35;1mPagePart Load (0.000640)[0m   [0mSELECT * FROM `page_parts` WHERE (page_parts.page_id = 1) AND (`page_parts`.`name` = 'sidebar') ORDER BY id LIMIT 1[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `page_parts` WHERE (page_parts.page_id = 1) AND (`page_parts`.`name` = 'sidebar') ORDER BY id LIMIT 1[0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`parent_id` IS NULL) LIMIT 1[0m
+  [4;36;1mPage Load (0.001368)[0m   [0;1mSELECT * FROM `pages` WHERE (pages.parent_id = 1) AND (`pages`.`slug` = 'articles') ORDER BY virtual DESC, title ASC LIMIT 1[0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;36;1mPage Load (0.002052)[0m   [0;1mSELECT * FROM `pages` WHERE (pages.parent_id = 4 AND ((virtual = 0) and (status_id = 100))) ORDER BY published_at DESC, virtual DESC, title ASC LIMIT 10[0m
+  [4;35;1mPage Load (0.001216)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`id` = 4) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`id` = 4) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`id` = 4) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`id` = 4) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`id` = 4) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`id` = 4) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`id` = 4) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`id` = 4) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`id` = 4) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`id` = 4) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;35;1mSnippet Load (0.000986)[0m   [0mSELECT * FROM `snippets` WHERE (`snippets`.`name` = 'footer') LIMIT 1[0m
+  [4;36;1mRadiant::Config Load (0.000588)[0m   [0;1mSELECT * FROM `config` WHERE (`config`.`key` = 'local.timezone') LIMIT 1[0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `config` WHERE (`config`.`key` = 'dev.host') LIMIT 1[0m
+Completed in 0.25861 (3 reqs/sec) | DB: 0.06876 (26%) | 404 Not Found [http://localhost/images/rss.jpg]
+  [4;36;1mSQL (0.000746)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mPage Columns (0.005070)[0m   [0mSHOW FIELDS FROM `pages`[0m
+  [4;36;1mRadiant::Config Load (0.000595)[0m   [0;1mSELECT * FROM `config` WHERE (`config`.`key` = 'comments.filters_enabled') LIMIT 1[0m
+  [4;35;1mRadiant::Config Load (0.000386)[0m   [0mSELECT * FROM `config` WHERE (`config`.`key` = 'comments.notification') LIMIT 1[0m
+  [4;36;1mRadiant::Config Load (0.000347)[0m   [0;1mSELECT * FROM `config` WHERE (`config`.`key` = 'comments.notification_from') LIMIT 1[0m
+  [4;35;1mRadiant::Config Load (0.000374)[0m   [0mSELECT * FROM `config` WHERE (`config`.`key` = 'comments.akismet_url') LIMIT 1[0m
+  [4;36;1mRadiant::Config Load (0.000350)[0m   [0;1mSELECT * FROM `config` WHERE (`config`.`key` = 'comments.notification_to') LIMIT 1[0m
+  [4;35;1mRadiant::Config Load (0.000343)[0m   [0mSELECT * FROM `config` WHERE (`config`.`key` = 'comments.akismet_key') LIMIT 1[0m
+  [4;36;1mRadiant::Config Load (0.000343)[0m   [0;1mSELECT * FROM `config` WHERE (`config`.`key` = 'comments.notification_site_name') LIMIT 1[0m
+  [4;35;1mSQL (0.000713)[0m   [0mSHOW TABLES[0m
+  [4;36;1mArchiveYearIndexPage Columns (0.004765)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+  [4;35;1mSQL (0.000745)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.000516)[0m   [0;1mSELECT DISTINCT class_name FROM pages WHERE class_name <> '' AND class_name IS NOT NULL[0m
+
+
+Processing SiteController#show_page (for 127.0.0.1 at 2008-10-14 21:44:26) [GET]
+  Parameters: {"url"=>["rss"], "action"=>"show_page", "controller"=>"site"}
+  [4;35;1mRadiant::Config Load (0.001452)[0m   [0mSELECT * FROM `config` WHERE (`config`.`key` = 'dev.host') LIMIT 1[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `config` WHERE (`config`.`key` = 'dev.host') LIMIT 1[0m
+  [4;35;1mPage Load (0.001964)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`parent_id` IS NULL) LIMIT 1[0m
+  [4;36;1mPage Load (0.001754)[0m   [0;1mSELECT * FROM `pages` WHERE (pages.parent_id = 1) AND (`pages`.`slug` = 'rss') ORDER BY virtual DESC, title ASC LIMIT 1[0m
+  [4;35;1mPage Load (0.001455)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;36;1mSQL (0.000829)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mLayout Columns (0.003024)[0m   [0mSHOW FIELDS FROM `layouts`[0m
+  [4;36;1mLayout Load (0.000859)[0m   [0;1mSELECT * FROM `layouts` WHERE (`layouts`.`id` = 3) ORDER BY name[0m
+  [4;35;1mSQL (0.001327)[0m   [0mSHOW TABLES[0m
+  [4;36;1mPagePart Load (0.000806)[0m   [0;1mSELECT * FROM `page_parts` WHERE (page_parts.page_id = 3) ORDER BY id[0m
+  [4;35;1mPagePart Columns (0.001816)[0m   [0mSHOW FIELDS FROM `page_parts`[0m
+  [4;36;1mPagePart Load (0.000542)[0m   [0;1mSELECT * FROM `page_parts` WHERE (page_parts.page_id = 3) AND (`page_parts`.`name` = 'body') ORDER BY id LIMIT 1[0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`parent_id` IS NULL) LIMIT 1[0m
+  [4;36;1mPage Load (0.001265)[0m   [0;1mSELECT * FROM `pages` WHERE (pages.parent_id = 1) AND (`pages`.`slug` = 'articles') ORDER BY virtual DESC, title ASC LIMIT 1[0m
+  [4;35;1mArchivePage Columns (0.004742)[0m   [0mSHOW FIELDS FROM `pages`[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;35;1mPage Load (0.004644)[0m   [0mSELECT * FROM `pages` WHERE (pages.parent_id = 4 AND ((virtual = 0) and (status_id = 100))) ORDER BY published_at DESC, virtual DESC, title ASC LIMIT 10[0m
+  [4;36;1mPagePart Load (0.000859)[0m   [0;1mSELECT * FROM `page_parts` WHERE (page_parts.page_id = 43) ORDER BY id[0m
+  [4;35;1mPagePart Load (0.000690)[0m   [0mSELECT * FROM `page_parts` WHERE (page_parts.page_id = 43) AND (`page_parts`.`name` = 'body') ORDER BY id LIMIT 1[0m
+  [4;36;1mPage Load (0.001357)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`id` = 4) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;36;1mPagePart Load (0.000815)[0m   [0;1mSELECT * FROM `page_parts` WHERE (page_parts.page_id = 42) ORDER BY id[0m
+  [4;35;1mPagePart Load (0.000615)[0m   [0mSELECT * FROM `page_parts` WHERE (page_parts.page_id = 42) AND (`page_parts`.`name` = 'body') ORDER BY id LIMIT 1[0m
+  [4;36;1mSnippet Columns (0.002034)[0m   [0;1mSHOW FIELDS FROM `snippets`[0m
+  [4;35;1mSnippet Load (0.001996)[0m   [0mSELECT * FROM `snippets` WHERE (`snippets`.`name` = 'comments') LIMIT 1[0m
+  [4;36;1mComment Columns (0.002628)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (0.000544)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (comments.page_id = 42 AND (comments.approved_at IS NOT NULL)) [0m
+  [4;36;1mComment Load (0.001207)[0m   [0;1mSELECT * FROM `comments` WHERE (comments.page_id = 42 AND (comments.approved_at IS NOT NULL)) ORDER BY created_at ASC[0m
+  [4;35;1mSnippet Load (0.000758)[0m   [0mSELECT * FROM `snippets` WHERE (`snippets`.`name` = 'comment') LIMIT 1[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `snippets` WHERE (`snippets`.`name` = 'comment') LIMIT 1[0m
+  [4;35;1mSnippet Load (0.000849)[0m   [0mSELECT * FROM `snippets` WHERE (`snippets`.`name` = 'comment_form') LIMIT 1[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`id` = 4) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;36;1mPagePart Load (0.000738)[0m   [0;1mSELECT * FROM `page_parts` WHERE (page_parts.page_id = 41) ORDER BY id[0m
+  [4;35;1mPagePart Load (0.000630)[0m   [0mSELECT * FROM `page_parts` WHERE (page_parts.page_id = 41) AND (`page_parts`.`name` = 'body') ORDER BY id LIMIT 1[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`id` = 4) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;36;1mPagePart Load (0.000769)[0m   [0;1mSELECT * FROM `page_parts` WHERE (page_parts.page_id = 38) ORDER BY id[0m
+  [4;35;1mPagePart Load (0.000646)[0m   [0mSELECT * FROM `page_parts` WHERE (page_parts.page_id = 38) AND (`page_parts`.`name` = 'body') ORDER BY id LIMIT 1[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`id` = 4) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;36;1mPagePart Load (0.000741)[0m   [0;1mSELECT * FROM `page_parts` WHERE (page_parts.page_id = 37) ORDER BY id[0m
+  [4;35;1mPagePart Load (0.000560)[0m   [0mSELECT * FROM `page_parts` WHERE (page_parts.page_id = 37) AND (`page_parts`.`name` = 'body') ORDER BY id LIMIT 1[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`id` = 4) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;36;1mPagePart Load (0.000772)[0m   [0;1mSELECT * FROM `page_parts` WHERE (page_parts.page_id = 25) ORDER BY id[0m
+  [4;35;1mPagePart Load (0.000540)[0m   [0mSELECT * FROM `page_parts` WHERE (page_parts.page_id = 25) AND (`page_parts`.`name` = 'body') ORDER BY id LIMIT 1[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`id` = 4) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;36;1mPagePart Load (0.000782)[0m   [0;1mSELECT * FROM `page_parts` WHERE (page_parts.page_id = 24) ORDER BY id[0m
+  [4;35;1mPagePart Load (0.000579)[0m   [0mSELECT * FROM `page_parts` WHERE (page_parts.page_id = 24) AND (`page_parts`.`name` = 'body') ORDER BY id LIMIT 1[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`id` = 4) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;36;1mPagePart Load (0.000775)[0m   [0;1mSELECT * FROM `page_parts` WHERE (page_parts.page_id = 23) ORDER BY id[0m
+  [4;35;1mPagePart Load (0.000554)[0m   [0mSELECT * FROM `page_parts` WHERE (page_parts.page_id = 23) AND (`page_parts`.`name` = 'body') ORDER BY id LIMIT 1[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`id` = 4) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;36;1mPagePart Load (0.000776)[0m   [0;1mSELECT * FROM `page_parts` WHERE (page_parts.page_id = 22) ORDER BY id[0m
+  [4;35;1mPagePart Load (0.000574)[0m   [0mSELECT * FROM `page_parts` WHERE (page_parts.page_id = 22) AND (`page_parts`.`name` = 'body') ORDER BY id LIMIT 1[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`id` = 4) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;36;1mPagePart Load (0.000807)[0m   [0;1mSELECT * FROM `page_parts` WHERE (page_parts.page_id = 21) ORDER BY id[0m
+  [4;35;1mPagePart Load (0.000579)[0m   [0mSELECT * FROM `page_parts` WHERE (page_parts.page_id = 21) AND (`page_parts`.`name` = 'body') ORDER BY id LIMIT 1[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`id` = 4) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `config` WHERE (`config`.`key` = 'dev.host') LIMIT 1[0m
+Cached page: /src/fring_site/cache/rss (0.00058)
+Completed in 0.53772 (1 reqs/sec) | DB: 0.06695 (12%) | 200 OK [http://localhost/rss/]
+  [4;35;1mSQL (0.000774)[0m   [0mSHOW TABLES[0m
+  [4;36;1mPage Columns (0.004842)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+  [4;35;1mRadiant::Config Load (0.000537)[0m   [0mSELECT * FROM `config` WHERE (`config`.`key` = 'comments.filters_enabled') LIMIT 1[0m
+  [4;36;1mRadiant::Config Load (0.000397)[0m   [0;1mSELECT * FROM `config` WHERE (`config`.`key` = 'comments.notification') LIMIT 1[0m
+  [4;35;1mRadiant::Config Load (0.000395)[0m   [0mSELECT * FROM `config` WHERE (`config`.`key` = 'comments.notification_from') LIMIT 1[0m
+  [4;36;1mRadiant::Config Load (0.000357)[0m   [0;1mSELECT * FROM `config` WHERE (`config`.`key` = 'comments.akismet_url') LIMIT 1[0m
+  [4;35;1mRadiant::Config Load (0.000347)[0m   [0mSELECT * FROM `config` WHERE (`config`.`key` = 'comments.notification_to') LIMIT 1[0m
+  [4;36;1mRadiant::Config Load (0.000341)[0m   [0;1mSELECT * FROM `config` WHERE (`config`.`key` = 'comments.akismet_key') LIMIT 1[0m
+  [4;35;1mRadiant::Config Load (0.000339)[0m   [0mSELECT * FROM `config` WHERE (`config`.`key` = 'comments.notification_site_name') LIMIT 1[0m
+  [4;36;1mSQL (0.000678)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mArchiveYearIndexPage Columns (0.004490)[0m   [0mSHOW FIELDS FROM `pages`[0m
+  [4;36;1mSQL (0.000680)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.000510)[0m   [0mSELECT DISTINCT class_name FROM pages WHERE class_name <> '' AND class_name IS NOT NULL[0m
