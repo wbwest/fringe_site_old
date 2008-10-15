@@ -1,7 +1,0 @@
-<% form_for :user, :html => {:multipart => true} do |form| %>
-  <%= error_messages_for 'user' %>
-  <label for="picture">Personal Image</label>
-  <%= file_field_tag "picture" %>
-  <%= submit_tag "Save", :class=>"submit" %>
-  <%= link_to "cancel", :action => :edit, :id => params[:id] %>
-<% end %>
