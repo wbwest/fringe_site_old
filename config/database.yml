@@ -29,7 +29,7 @@ test:
 
 production:
   adapter: mysql
-  database: db_1_2481
-  username: user_2481
-  password: rrhdabr_
+  database: db_1_3933
+  username: user_3933
+  password: -j8zs896
   host: 10.251.69.235
