@@ -28,11 +28,6 @@
     <%= form.check_box :headliner %>
   </p>
 
-  <p>
-    <label for="event">Event</label>
-    <%= collection_select(:performer, :event_id, Event.find(:all), :id, :name) %>
-  </p>
-  
   <%= submit_tag "Create Performers", :class => "submit" %>
   <%= link_to "cancel", :controller => "admin/performer_manager", :action => "index" %>
   

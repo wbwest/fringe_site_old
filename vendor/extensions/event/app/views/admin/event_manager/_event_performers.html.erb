@@ -1,0 +1,8 @@
+<% @event.performers.each do |performer| %>
+  <p>
+    <%= performer.company %>
+    <%= link_to "edit", :controller=>"admin/performer_manager", :action=>"edit", :id=>performer %>
+    <%= link_to_remote "remove", :url=>{:action=>"detach_performer", :performer_id=>performer, :event_id=>@event}, :update=>"performers" %>
+  </p>
+<% end %>
+<%= link_to_remote "add performer", :url => {:action=>"select_performer", :id=>@event }, :update  => "performers"%>

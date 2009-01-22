@@ -34,21 +34,28 @@ class Admin::EventManagerController < ApplicationController
     def select_performer
       @performers = Performer.find :all, :order => :company
       @event = Event.find_by_id params[:id]
+      render :partial => "admin/event_manager/select_performer"
     end  
     
     def attach_performer
-      event = Event.find_by_id params[:event_id]
+      @event = Event.find_by_id params[:event_id]
       performer = Performer.find_by_id params[:performer_id]
-      performer.events << event
+      performer.events << @event
       performer.save!
-      redirect_to :controller=>"event_manager", :action=>"view", :id=>event.id
+      render :partial => "admin/event_manager/event_performers"
+    end
+    
+    def cancel_select
+      @event = Event.find_by_id params[:event_id]
+      render :partial => "admin/event_manager/event_performers"
     end
     
     def detach_performer
-      event = Event.find_by_id params[:event_id]
+      @event = Event.find_by_id params[:event_id]
       performer = Performer.find params[:performer_id]
-      event.performers.delete(performer)
-      event.save!
-      redirect_to :action=>:view, :id=>event.id
+      @event.performers.delete(performer)
+      @event.save!
+      render :partial => "admin/event_manager/event_performers"
+      
     end
 end
