@@ -16,6 +16,10 @@ label {
   margin-right: 1em;
   display: block;
 }
+.admin_table td {
+  padding: 5px 10px 5px 10px;
+  border:black dotted 1px;
+}
 /* because of IE6 this should be a separate block from the previous one */
 input[type='image'] { 
   border: none;

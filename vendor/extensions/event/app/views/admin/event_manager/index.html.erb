@@ -6,7 +6,7 @@
 <table class="admin_table">
   <% @events.each do |event| %>
   <tr>
-    <td><%= event.name %></td>
+    <td><%= link_to event.name, :action=>:view, :id=>event %></td>
     <td><%= link_to "edit", :action=>:edit, :id=>event %></td>
     <td><%= link_to "delete", {:action=>:delete, :id=>event}, :confirm=>"Are you sure?" %>
   </tr>

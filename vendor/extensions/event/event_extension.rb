@@ -10,6 +10,7 @@ class EventExtension < Radiant::Extension
     map.with_options(:controller => 'admin/performer_manager') do |link|
       map.connect ':controller/:action/:id.:format'
       map.connect ':controller/:action/:id'
+      #map.connect 'freakshow', :controller => 'admin/event_manager', :action=> "view", :id=>"1"
     end
   end
   

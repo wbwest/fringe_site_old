@@ -3,6 +3,12 @@ class Admin::EventManagerController < ApplicationController
       @events = Event.find :all, :order=>:name      
     end
     
+    def view
+      @event = Event.find_by_id params[:id]
+      @event_description = (RedCloth.new @event.description).to_html
+      @performers = @event.performers
+    end
+    
     def new
       @event = Event.new(params[:event])
       if request.post? && @event.save!

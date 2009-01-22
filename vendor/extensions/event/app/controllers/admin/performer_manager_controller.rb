@@ -25,4 +25,17 @@ class Admin::PerformerManagerController < ApplicationController
     redirect_to :action => :index
   end
   
+  def select
+    @performers = Performer.find :all, :order => :company
+    @event = Event.find_by_id params[:id]
+  end
+  
+  def attach_performer
+    event = Event.find_by_id params[:event_id]
+    performer = Performer.find_by_id params[:performer_id]
+    performer.event = event
+    performer.save!
+    redirect_to :controller=>"event_manager", :action=>"view", :id=>event.id
+  end
+  
 end

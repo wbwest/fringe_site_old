@@ -1,0 +1,10 @@
+<h1><%= @event.name %>.</h1>
+<%= @event_description %>
+<h3>performers</h3>
+<% @performers.each do |performer| %>
+  <p>
+    <%= performer.company %>
+    <%= link_to "edit", :controller=>"admin/performer_manager", :action=>"edit", :id=>performer %>
+  </p>
+<% end %>
+<%= link_to "add performer", :controller=>"admin/performer_manager", :action=>"select", :id=>@event %>

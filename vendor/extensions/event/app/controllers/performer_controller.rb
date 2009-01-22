@@ -10,6 +10,5 @@ class PerformerController < ApplicationController
     @performer = Performer.find_by_id params[:id]
     rc = RedCloth.new @performer.description
     @performer_description = rc.to_html
-  end
-  
+  end  
 end

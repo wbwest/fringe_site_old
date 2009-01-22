@@ -1,0 +1,8 @@
+<table class="admin_table">
+  <% @performers.each do |performer| %>
+  <tr>
+    <td><%= performer.company %></td>
+    <td><%= link_to "select", :action=>:attach_performer, :event_id=>params[:id], :performer_id=>performer %></td>
+  </tr>
+  <% end %>
+</table>
