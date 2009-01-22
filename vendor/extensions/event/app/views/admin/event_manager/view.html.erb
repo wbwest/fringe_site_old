@@ -5,6 +5,7 @@
   <p>
     <%= performer.company %>
     <%= link_to "edit", :controller=>"admin/performer_manager", :action=>"edit", :id=>performer %>
+    <%= link_to "remove", :action=>"detach_performer", :performer_id=>performer, :event_id=>@event %>
   </p>
 <% end %>
-<%= link_to "add performer", :controller=>"admin/performer_manager", :action=>"select", :id=>@event %>
+<%= link_to "add performer", :action=>"select_performer", :id=>@event %>

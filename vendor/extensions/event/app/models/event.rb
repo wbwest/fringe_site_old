@@ -1,3 +1,3 @@
 class Event < ActiveRecord::Base
-  has_many :performers 
+  has_and_belongs_to_many :performers 
 end
