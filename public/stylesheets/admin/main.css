@@ -8,6 +8,14 @@ img {
   border: none;
   vertical-align: middle; 
 }
+label {
+  font-family: verdana, arial, helvetica, sans-serif;
+  width: 10em;
+  float:left;
+  text-align:right;
+  margin-right: 1em;
+  display: block;
+}
 /* because of IE6 this should be a separate block from the previous one */
 input[type='image'] { 
   border: none;

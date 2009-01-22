@@ -8,7 +8,7 @@ load 'deploy'
 # The svn repository is used to export the code into the temporary directory before 
 # uploading code into the Morph control panel. Currently only svn is supported, 
 # but you could change it to fit your need by changing the get_code task
-set :repository, 'git://github.com/revworks/fringe_site.git' # Set here your repository! Example: 'https://www.myrepo.com/myapp/trunk'
+set :repository, 'git@github.com:revworks/fringe_site.git' # Set here your repository! Example: 'https://www.myrepo.com/myapp/trunk'
 set :repo_line_number, __LINE__ - 1 # Needed to report missing repository later on
 
 # The version name to set in the control panel. Defaults to date and time, but can be altered by passing it
@@ -20,13 +20,12 @@ set :version_name, Time.now.utc.strftime('%Y-%m-%d %H:%M:%S')
 # You want it to work differently, change the code in the get_code task 
 set :deploy_via, :checkout
 set :scm, :git
-set :git_enable_submodules,1
 
 # MORPH SETTINGS, please do not change
 set :morph_host, "panel.mor.ph"
 set :morph_port, 443
 set :morph_tmp_dir, 'morph_tmp'
-set :mex_key, "c15c173efa479b760733ffc14ec78f31b67605ee"
+set :mex_key, "9dbb075c9f73993370bbe39807989d0ef269f76e"
 set :mv_cmd, PLATFORM.include?('mswin') ? 'ren' : 'mv'
 set :morph_tmp_dir, 'morph_tmp'
 set :release_path, morph_tmp_dir # needed in order to generate the correct scm command 
@@ -47,9 +46,17 @@ namespace :morph do
       abort('*** ERROR: You need a MeX key!') if !exists?(:mex_key) || mex_key.nil?                
       update_code
       send_request(true, 'Post', morph_host, morph_port, '/api/deploy/deploy', {}, nil, "*** ERROR: Could not deploy the application!")
-      say("Deploy Done.") 
-      say("For more information on the status of this deployment, you can view the Deployment Logs by clicking 'Manage' located on your subscription widget and by clicking 'Logs'.")       
-      say("In this same page, you can also view your Production logs and Scheduled task logs. ")
+      say("Deployment queued.")
+
+	  say("For more information on the status of this deployment, you")
+
+	  say("can view the Deployment Logs by clicking 'Manage' located")
+
+      say("on your subscription widget and by clicking the 'Logs' tab.")
+
+      say("In this same page, you can also view your Production logs")
+
+      say("and Scheduled task logs.")
     end
   end
 
@@ -106,11 +113,6 @@ namespace :morph do
         system(strategy.send(:command))
         
         abort('*** ERROR: Export from repository failed! Please check the repository setting at the start of the file') if $?.to_i != 0
-
-        # Verify that we have the expected rails structure 
-	    #['/app', '/public', '/config/environment.rb', '/lib'].each do |e| 
-	       #abort "*** ERROR: Rails directories are missing. Please make sure your set :repository is correct!" if !File.exist?("#{morph_tmp_dir}#{e}")
-	    #end
       
 
       #create archive
@@ -121,12 +123,12 @@ namespace :morph do
       
       # Verify that we have the expected rails structure in the archive
       
-      #flist = `tar tzf code_update.tar.gz`
-      #all_in = flist.include?('lib/') && flist.include?('app/') && flist.include?('config/environment.rb')
+      flist = `tar tzf code_update.tar.gz`
+      all_in = flist.include?('lib/') && flist.include?('app/') && flist.include?('config/environment.rb')
       
-      #abort "***ERROR: code archive is missing the rails directories. Please check your checkout and tar" if !all_in
+      abort "***ERROR: code archive is missing the rails directories. Please check your checkout and tar" if !all_in
 
-      #remove_files([morph_tmp_dir])
+      remove_files([morph_tmp_dir])
     end
   end
 

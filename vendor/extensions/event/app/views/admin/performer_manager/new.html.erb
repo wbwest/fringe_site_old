@@ -1,0 +1,39 @@
+<h2>Add a Performer</h2>
+<%= error_messages_for 'proposal' %>
+
+<% form_for :performer do |form| %>
+
+  <p>
+    <label for="company">Company</label>
+    <%= form.text_field :company, :size => 40 %>
+  </p>
+  
+  <p>
+    <label for="url">URL</label>
+    <%= form.text_field :url, :size => 40 %>
+  </p>
+  
+  <p>
+    <label for="image">Image URL</label>
+    <%= form.text_field :image, :size => 40 %>
+  </p>
+  
+  <p>
+    <label for="description">Description</label>
+    <%= form.text_area :description, :rows => 10, :cols => 60, :rows=>15, :cols=>60 %>
+  </p>
+
+  <p>
+    <label for="headliner">Is this a headliner?</label>
+    <%= form.check_box :headliner %>
+  </p>
+
+  <p>
+    <label for="event">Event</label>
+    <%= collection_select(:performer, :event_id, Event.find(:all), :id, :name) %>
+  </p>
+  
+  <%= submit_tag "Create Performers", :class => "submit" %>
+  <%= link_to "cancel", :controller => "admin/performer_manager", :action => "index" %>
+  
+<% end %>

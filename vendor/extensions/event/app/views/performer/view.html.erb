@@ -1,0 +1,14 @@
+<% content_for :right_column do %>
+  <div class="show_links">
+    <p/>
+    <h1><%= @performer.company %></h1>
+    <h4><%= @performer.time %> <%= "at " + @performer.location if @performer.location %></h4>
+    <h2><a href="http://<%= @performer.url %>"><%= @performer.url %></a></h2>
+    <%= @performer_description %>
+    <a href="http://www.brownpapertickets.com/event/48804"><img src="/images/buttons/buy_tickets.gif" /></a>
+  </div>
+<% end %>
+
+<% content_for :left_column do %>
+  <img src="/images/performers/<%= @performer.image %>" id="performer_image" /> 
+<% end %>

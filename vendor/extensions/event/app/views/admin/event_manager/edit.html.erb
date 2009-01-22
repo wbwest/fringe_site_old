@@ -1,0 +1,29 @@
+<h2>Add a Event</h2>
+<%= error_messages_for 'event' %>
+
+<% form_for :event do |form| %>
+
+  <p>
+    <label for="name">Name</label>
+    <%= form.text_field :name, :size => 40 %>
+  </p>
+  
+  <p>
+    <label for="location">Location</label>
+    <%= form.text_field :location, :size => 40 %>
+  </p>
+
+  <p>
+    <label for="time">Time</label>
+    <%= form.text_field :time, :size => 40 %>
+  </p>
+    
+  <p>
+    <label for="description">Description</label>
+    <%= form.text_area :description, :rows => 10, :cols => 60, :rows=>15, :cols=>60 %>
+  </p>
+  
+  <%= submit_tag "Update Event", :class => "submit" %>
+  <%= link_to "cancel", :controller => "admin/event_manager", :action => "index" %>
+  
+<% end %>

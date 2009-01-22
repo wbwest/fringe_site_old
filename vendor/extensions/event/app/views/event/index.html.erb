@@ -1,0 +1,16 @@
+<% content_for :right_column do %>
+  <p/>
+  <% @events.each do |event| %> 
+    <div >
+      <h1><%= link_to event.name, {:action=>:view, :id=>event} %></h1>
+    </div>
+    <hr/>
+  <% end %>
+<% end %>
+
+<% content_for :left_column do %>
+  <div id="main_nav">
+    <a href="about"><img src='images/buttons/about_us.gif' ></a> <br/> <a href="event"><img src='images/buttons/events_button.gif'</a> <br/> <a href="sponsors"><img src='images/buttons/our_sponsors.gif'</a> <br/> <a href="venue"><img src='images/buttons/getting_there.gif'</a> <br/> <a href="videos"><img src='images/buttons/videos.gif'</a> <br/> <a href="press"><img src='images/buttons/press.gif'</a> <br/> <a href="contact"><img src='images/buttons/contact_us.gif'</a>
+  </div>
+  
+<% end %>

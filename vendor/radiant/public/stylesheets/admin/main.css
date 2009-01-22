@@ -8,6 +8,7 @@ img {
   border: none;
   vertical-align: middle; 
 }
+
 /* because of IE6 this should be a separate block from the previous one */
 input[type='image'] { 
   border: none;

@@ -1,0 +1,21 @@
+<% content_for :right_column do %>
+  <div class="show_links">
+    <p/>
+    <h1><%= @event.name %></h1>
+    <h2><%= @event.time %> at <%= @event.location %></h2>
+    <%= @event_description %>
+    <% if @event.performers.length > 0   %>
+      <%= "performances by" %>
+    <% end %>
+    <ul>
+    <% @event.performers.each do |performer| %>
+      <li><a href="/performer/view/<%= performer.id %>" > <%= performer.company %></a>
+    <% end %>
+    </ul>
+    <a href="http://www.brownpapertickets.com/event/48804"><img src="/images/buttons/buy_tickets.gif" /></a>
+  </div>
+<% end %>
+
+<% content_for :left_column do %>
+
+<% end %>

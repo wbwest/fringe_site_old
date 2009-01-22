@@ -1,0 +1,15 @@
+<% content_for :right_column do %>
+  <p/>
+  <% @performers.each do |performer| %> 
+    <h3 style="margin-bottom:2px;"><%= link_to performer.company, {:action=>:view, :id=>performer} %></h3>
+    <h4><%= performer.time %> <%= "at " + performer.location if performer.location %></h4>
+    <hr/>
+  <% end %>
+<% end %>
+
+<% content_for :left_column do %>
+  <div id="main_nav">
+    <a href="about"><img src='images/buttons/about_us.gif' ></a> <br/> <a href="performer"><img src='images/buttons/performers_button.gif'</a> <br/> <a href="sponsors"><img src='images/buttons/our_sponsors.gif'</a> <br/> <a href="venue"><img src='images/buttons/getting_there.gif'</a> <br/>  <a href="press"><img src='images/buttons/press.gif'</a> <br/> <a href="contact"><img src='images/buttons/contact_us.gif'</a>
+  </div>
+  
+<% end %>

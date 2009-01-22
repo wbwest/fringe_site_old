@@ -1,0 +1,15 @@
+<h1>Performers</h1>
+
+<%= link_to "Add Performer", :action => :new %>
+<br/><br/>
+
+<table class="admin_table">
+  <% @performers.each do |performer| %>
+  <tr>
+    <td><%= performer.company %></td>
+    <td><%= link_to "edit", :action=>:edit, :id=>performer %></td>
+    <td><%= link_to "delete", {:action=>:delete, :id=>performer}, :confirm=>"Are you sure?" %>
+  </tr>
+  
+  <% end %>
+</table>
