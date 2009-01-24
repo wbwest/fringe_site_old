@@ -7,14 +7,13 @@ class EventExtension < Radiant::Extension
   url "www.hollywoodfringe.org"
   
   define_routes do |map|
-    map.with_options(:controller => 'admin/performer_manager') do |link|
-      map.connect ':controller/:action/:id.:format'
-    end
+    map.connect 'admin/events/:action', :controller => 'admin/event_manager'
+    map.connect 'admin/performers/:action', :controller => 'admin/performer_manager'
   end
   
   def activate
-    admin.tabs.add "Performers", "/admin/performer_manager", :before => "Layouts" 
-    admin.tabs.add "Events", "/admin/event_manager", :before => "Layouts" 
+    admin.tabs.add "Performers", "/admin/performers", :before => "Layouts" 
+    admin.tabs.add "Events", "/admin/events", :before => "Layouts" 
     Page.send :include, PerformerTags
     Page.send :include, EventTags
   end
