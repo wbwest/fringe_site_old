@@ -2,15 +2,13 @@
 # require_dependency 'application'
 
 class EventExtension < Radiant::Extension
-  version "1.0"
+  version ".2"
   description "manage fringe events"
-  url "www.artbashla.com"
+  url "www.hollywoodfringe.org"
   
   define_routes do |map|
     map.with_options(:controller => 'admin/performer_manager') do |link|
       map.connect ':controller/:action/:id.:format'
-      map.connect ':controller/:action/:id'
-      #map.connect 'freakshow', :controller => 'admin/event_manager', :action=> "view", :id=>"1"
     end
   end
   
